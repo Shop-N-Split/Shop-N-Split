@@ -1,5 +1,5 @@
 <h1>👾 Please Read！</h1>
-
+<h2>This assumes that you have knowledge of git and how to use it (eg. git push, commit, add, status)</h2>
 <p>This is the start of the project. Akshaj has added a temp README file file for everyone to read.</p>
 
 <p><strong>This is what everyone has to do to complete the project w/o major fuckups to the working files</strong></p>
