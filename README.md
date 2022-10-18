@@ -4,12 +4,10 @@
 
 <p><strong>This is what everyone has to do to complete the project w/o major fuckups to the working files</strong></p>
 
+There is a master branch and a development branch
+DO NOT make changes to the master branch
 
-<strong>Steps to follow for the project and using Git Version Control:</strong>
- <ul>
-  <li>There is a master branch and a development branch</li>
-  <li>DO NOT make changes to the master branch</li>
-  <li>clone the repository with `git clone` https://github.com/Shop-N-Split/Shop-N-Split.git </li>
- </ul>
- 
+<p>Clone the main repo with</p>
  `git clone https://github.com/Shop-N-Split/Shop-N-Split.git`
+ 
+ 
