@@ -10,4 +10,4 @@
   <li>clone the repository with `git clone` https://github.com/Shop-N-Split/Shop-N-Split.git </li>
  </ul>
  
- `git clone`
+ `git clone https://github.com/Shop-N-Split/Shop-N-Split.git`
