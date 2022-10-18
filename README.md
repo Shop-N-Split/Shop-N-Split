@@ -1,4 +1,4 @@
-<h1>👾Please Read</h1>
+<h1>👾 Please Read</h1>
 
 <p>This is the start of the project. Akshaj has added a temp README file file for everyone to read.</p>
 
@@ -7,5 +7,5 @@
  <ul>
   <li>There is a master branch and a development branch</li>
   <li>DO NOT make changes to the master branch</li>
-  <li>lone the repository with git clone https://github.com/Shop-N-Split/Shop-N-Split.git </li>
+  <li>clone the repository with `git clone` https://github.com/Shop-N-Split/Shop-N-Split.git </li>
  </ul>
