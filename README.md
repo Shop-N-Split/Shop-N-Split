@@ -10,5 +10,15 @@ DO NOT make changes to the master branch
 <p>Clone the main repo with</p>
 
 `git clone https://github.com/Shop-N-Split/Shop-N-Split.git`
+
+<p>Start the git process</p>
+
+`git init`
+
+<p>Once you have the file and stuff done, change the git head to the development branch</p>
+
+`git checkout -b development`
+
+
  
  
