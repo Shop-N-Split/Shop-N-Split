@@ -24,17 +24,24 @@ DO NOT make changes to the master branch
 
 `git checkout -b development`
 
-<p>Pull all the updates from development before you start working on it</p>
-
-`git pull origin development`
-
+<p>Because there are other people simultaneously working on the code, we have a few extra steps</p>
+<p>We will make another branch where we will do our own work</p>
+<p>For example, if I am making the login page, I will create something like this:</p>
+ 
+`git checkout -b login-page`
+ 
 <p>Once your work is done, you will need to update the contents on the remote. </p>
-
 ```
 git add .
 git commit -m "your comment on what you have done"
-git push origin development
+git fetch origin
+git checkout development //Change to the development branch
+git merge login-page //Merge login-page to the development branch
+git pull origin development //update the files from development becuase there might have been changes since you started working 
+git push origin development //push changes to github
+git branch -d login-page //delete the login-page branch
 ```
 
+<p>Steps are similar for merging to the master, by using pull requests and shit like that. Will explain later.</p>
  
  
