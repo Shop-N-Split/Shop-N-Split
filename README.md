@@ -1,4 +1,4 @@
-<h1>👾 Please Read ！</h1>
+<h1>👾 Please Read！</h1>
 
 <p>This is the start of the project. Akshaj has added a temp README file file for everyone to read.</p>
 
