@@ -7,6 +7,6 @@
   <ul>
     <li>There is a master branch and a development branch</li>
     <li><b>DO NOT</b> make changes to the master branch.</li>
-    <li>Clone the repository with `git clone https://github.com/Shop-N-Split/Shop-N-Split.git`</li>
+    <li>Clone the repository with `git clone https://github.com/Shop-N-Split/Shop-N-Split.git` </li>
   
   </ul>
