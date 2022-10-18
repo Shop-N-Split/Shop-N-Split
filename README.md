@@ -38,7 +38,8 @@ git commit -m "your comment on what you have done"
 git fetch origin
 git checkout development //Change to the development branch
 git merge login-page //Merge login-page to the development branch
-git pull origin development //update the files from development becuase there might have been changes since you started working 
+git pull origin development //update the files from development becuase there might have been 
+                            //changes since you started working 
 git push origin development //push changes to github
 git branch -d login-page //delete the login-page branch
 ```
