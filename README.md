@@ -8,6 +8,7 @@ There is a master branch and a development branch
 DO NOT make changes to the master branch
 
 <p>Clone the main repo with</p>
- `git clone https://github.com/Shop-N-Split/Shop-N-Split.git`
+
+`git clone https://github.com/Shop-N-Split/Shop-N-Split.git`
  
  
