@@ -12,12 +12,29 @@ DO NOT make changes to the master branch
 `git clone https://github.com/Shop-N-Split/Shop-N-Split.git`
 
 <p>Start the git process</p>
+
 `git init`
+
+<p>Pull all the contents of the master branch to your local environment</p>
+<p>This will update all the files from master on GitHub to the master locally</p>
+
+`git pull origin master`
 
 <p>Once you have the file and stuff done, change the git head to the development branch</p>
 
 `git checkout -b development`
 
+<p>Pull all the updates from development before you start working on it</p>
+
+`git pull origin development`
+
+<p>Once your work is done, you will need to update the contents on the remote. </p>
+
+```
+git add .
+git commit -m "your comment on what you have done"
+git push origin development
+```
 
  
  
