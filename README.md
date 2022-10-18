@@ -31,6 +31,7 @@ DO NOT make changes to the master branch
 `git checkout -b login-page`
  
 <p>Once your work is done, you will need to update the contents on the remote. </p>
+
 ```
 git add .
 git commit -m "your comment on what you have done"
