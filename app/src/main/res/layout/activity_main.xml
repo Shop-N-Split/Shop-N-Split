@@ -10,6 +10,7 @@
         android:id="@+id/textView"
         android:layout_width="95dp"
         android:layout_height="46dp"
+        android:textColor="#221e22"
         android:text="Log In"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
@@ -46,9 +47,13 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
 
     <Button
+        android:background="@drawable/roundstyle"
+
         android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#08EFD8"
+
         android:text="sign in"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,6 +63,7 @@
         app:layout_constraintVertical_bias="0.052" />
 
     <Button
+        android:background="@drawable/roundstyle"
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
