@@ -10,12 +10,12 @@
         android:id="@+id/textView"
         android:layout_width="95dp"
         android:layout_height="46dp"
-        android:textColor="#221e22"
         android:text="Log In"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#221e22"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.659" />
@@ -47,11 +47,11 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
 
     <Button
-        android:background="@drawable/roundstyle"
-
         android:id="@+id/login"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/roundstyle"
         android:backgroundTint="#08EFD8"
 
         android:text="sign in"
@@ -63,11 +63,11 @@
         app:layout_constraintVertical_bias="0.052" />
 
     <Button
-        android:background="@drawable/roundstyle"
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:background="@drawable/roundstyle"
         android:text="not a member? Register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
