@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "11175387345",
+    "project_id": "shopnsplit",
+    "storage_bucket": "shopnsplit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:11175387345:android:a6c4adf7208425d33d65f0",
+        "android_client_info": {
+          "package_name": "com.akshaj02.shopnsplit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "11175387345-o03uk6dnpci326f75i2hg12qv5omrmu3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRRpnEjbLmSz01E9WOMG496gx-dVJBciQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "11175387345-o03uk6dnpci326f75i2hg12qv5omrmu3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
