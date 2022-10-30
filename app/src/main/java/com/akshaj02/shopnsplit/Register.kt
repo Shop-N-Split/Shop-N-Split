@@ -20,6 +20,21 @@ class Register : AppCompatActivity() {
         val userPassword = findViewById<EditText>(R.id.password)
         val confirmPass = findViewById<EditText>(R.id.confirmPass)
         val username = findViewById<EditText>(R.id.username)
+       // val googleSignin = findViewById<TextView>(R.id.googleSignInButton)// TODO: App keeps crashing when this is not commented out
+
+//        googleSignin.setOnClickListener {
+//            when {
+//                googleSignin.isClickable -> {
+//                    Toast.makeText(
+//                        this@Register,
+//                        "Google Sign In is not yet implemented.",
+//                        Toast.LENGTH_SHORT
+//                    ).show()
+//                }
+//
+//            }
+//        }
+
         registerButton.setOnClickListener {
             when {
                 TextUtils.isEmpty(username.text.toString().trim { it <= ' ' }) -> {

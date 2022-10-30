@@ -103,6 +103,7 @@
 
 <!--    google sign in-->
     <com.google.android.gms.common.SignInButton
+        android:id="@+id/googleSignInButton"
         android:layout_width="120dp"
         android:layout_height="42dp"
         app:layout_constraintBottom_toBottomOf="parent"
