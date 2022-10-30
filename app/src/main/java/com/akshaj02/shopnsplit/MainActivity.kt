@@ -2,13 +2,13 @@ package com.akshaj02.shopnsplit
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import android.text.TextUtils
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import android.content.Intent
+import android.widget.TextView
 
 
 class MainActivity : AppCompatActivity() {
@@ -19,13 +19,13 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        val registerButton = findViewById<Button>(R.id.register)
+        val registerButton = findViewById<TextView>(R.id.register)
         registerButton.setOnClickListener {
             val intent = Intent(this, Register::class.java)
             startActivity(intent)
         }
 
-        val loginButton = findViewById<Button>(R.id.login)
+        val loginButton = findViewById<TextView>(R.id.signin)
         val emailAddress = findViewById<EditText>(R.id.emailAddress)
         val userPassword = findViewById<EditText>(R.id.password)
         loginButton.setOnClickListener {

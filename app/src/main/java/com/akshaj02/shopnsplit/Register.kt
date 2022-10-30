@@ -2,22 +2,20 @@ package com.akshaj02.shopnsplit
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import android.text.TextUtils
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import android.content.Intent
-
-
+import android.widget.TextView
 
 
 class Register : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
-        val registerButton = findViewById<Button>(R.id.registerButton)
+        val registerButton = findViewById<TextView>(R.id.registerButton)
         val emailAddress = findViewById<EditText>(R.id.emailAddress)
         val userPassword = findViewById<EditText>(R.id.password)
         val confirmPass = findViewById<EditText>(R.id.confirmPass)
