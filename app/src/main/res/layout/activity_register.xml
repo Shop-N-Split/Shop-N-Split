@@ -88,7 +88,7 @@
         android:id="@+id/registerButton"
         android:layout_width="120dp"
         android:layout_height="42dp"
-        android:layout_marginBottom="132dp"
+        android:layout_marginBottom="240dp"
         android:background="@drawable/ripple_effect"
         android:fontFamily="sans-serif"
         android:gravity="center"
@@ -100,6 +100,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+<!--    google sign in-->
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/googleSignInButton"
+        android:layout_width="120dp"
+        android:layout_height="42dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerButton"
+        app:layout_constraintVertical_bias="0.04" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

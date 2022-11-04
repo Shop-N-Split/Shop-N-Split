@@ -46,6 +46,8 @@ class MainActivity : AppCompatActivity() {
                     ).show()
                 }
 
+
+
                 else -> {
                     val email: String = emailAddress.text.toString().trim { it <= ' ' }
                     val password: String = userPassword.text.toString().trim { it <= ' ' }

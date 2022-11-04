@@ -8,6 +8,7 @@ import android.text.TextUtils
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import android.content.Intent
+import android.widget.Button
 import android.widget.TextView
 
 
@@ -20,6 +21,16 @@ class Register : AppCompatActivity() {
         val userPassword = findViewById<EditText>(R.id.password)
         val confirmPass = findViewById<EditText>(R.id.confirmPass)
         val username = findViewById<EditText>(R.id.username)
+        val googleSignin = findViewById<com.google.android.gms.common.SignInButton>(R.id.googleSignInButton)
+
+        googleSignin.setOnClickListener {
+            Toast.makeText(
+                this@Register,
+                "kaam chalra madarchod",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+
         registerButton.setOnClickListener {
             when {
                 TextUtils.isEmpty(username.text.toString().trim { it <= ' ' }) -> {
