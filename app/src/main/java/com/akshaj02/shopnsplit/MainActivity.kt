@@ -31,9 +31,9 @@ class MainActivity : AppCompatActivity() {
         loginButton.setOnClickListener {
             if (FirebaseAuth.getInstance().currentUser != null) {
                 // User is signed in (getCurrentUser() will be null if not signed in)
-                val intent = Intent(this, HomePage::class.java);
-                startActivity(intent);
-                finish();
+                val intent = Intent(this, productSearch::class.java)
+                startActivity(intent)
+                finish()
             }
             when {
                 TextUtils.isEmpty(emailAddress.text.toString().trim { it <= ' ' }) -> {
@@ -79,7 +79,7 @@ class MainActivity : AppCompatActivity() {
                                     Toast.LENGTH_SHORT
                                 ).show()
 
-                                val intent = Intent(this, Settings::class.java)
+                                val intent = Intent(this, productSearch::class.java)
                                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                                 intent.putExtra("user_id", firebaseUser.uid)
                                 intent.putExtra("email_id", email)
