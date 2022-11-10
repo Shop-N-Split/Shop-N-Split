@@ -3,6 +3,7 @@ package com.akshaj02.shopnsplit;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -20,6 +21,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 
 public class productSearch extends Activity {
@@ -148,11 +153,24 @@ public class productSearch extends Activity {
 
                     result = sb.toString();
 
-                    Log.d(TAG, "result=" + result);
+                    JSONObject resultJson = new JSONObject(result);
+                    //get items array
+                    JSONArray items = resultJson.getJSONArray("items");
+
+                    //print item with indentation
+
+
+
+
+
+
+
+
+                    Log.d(TAG, "result=" + items);
                     // use JSONObject to parse result to select items array
                     // TODO
 
-                    return result;
+                    return items.toString(4);
 
                 }else{
 
@@ -166,6 +184,8 @@ public class productSearch extends Activity {
                 }
             } catch (IOException e) {
                 Log.e(TAG, "Http Response ERROR " + e.toString());
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
 
             return null;
