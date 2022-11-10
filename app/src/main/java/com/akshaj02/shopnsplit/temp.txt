@@ -1,0 +1,40 @@
+////                        JSONArray title = items.getJSONObject(i).getJSONArray("htmlTitle");
+////                        JSONArray link = items.getJSONObject(i).getJSONArray("link");
+////                        JSONArray image = items.getJSONObject(i).getJSONArray("cse_image");
+////
+////                        Log.d(TAG, "Title: " + title);
+////                        Log.d(TAG, "Link: " + link);
+////                        Log.d(TAG, "Image: " + image);
+//
+//                        JSONObject item = items.getJSONObject(i);
+//                        String title = item.getString("htmlTitle");
+//                        String link = item.getString("link");
+//                        String image = item.getString("og:image");
+//
+//                        //store in an array
+//                        String[] product = {title, link, image};
+//
+//                        TextView titleView = new TextView(context);
+//                        titleView.setText(title);
+//                        titleView.setTextSize(20);
+//                        titleView.setPadding(0, 20, 0, 0);
+//                        titleView.setOnClickListener(new OnClickListener() {
+//                            @Override
+//                            public void onClick(View v) {
+//                                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+//                                startActivity(browserIntent);
+//                            }
+//                        });
+//
+//                        TextView linkView = new TextView(context);
+//                        linkView.setText(link);
+//                        linkView.setTextSize(15);
+//                        linkView.setPadding(0, 0, 0, 10);
+//                        linkView.setOnClickListener(new OnClickListener() {
+//                            @Override
+//                            public void onClick(View v) {
+//                                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+//                                startActivity(browserIntent);
+//                            }
+//                        });
+//                    }

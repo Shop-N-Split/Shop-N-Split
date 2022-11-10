@@ -3,14 +3,17 @@ package com.akshaj02.shopnsplit;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Instant;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
@@ -19,8 +22,11 @@ import android.view.View.OnClickListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -143,6 +149,7 @@ public class productSearch extends Activity {
                     BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                     StringBuilder sb = new StringBuilder();
                     String line;
+                    String[][] productDetails = new String[5][5];
 
                     while ((line = rd.readLine()) != null) {
                         sb.append(line + "\n");
@@ -154,24 +161,17 @@ public class productSearch extends Activity {
                     result = sb.toString();
 
                     JSONObject resultJson = new JSONObject(result);
-                    //get items array
                     JSONArray items = resultJson.getJSONArray("items");
 
-                    //print item with indentation
+                    for(int i = 0; i < 5; i++) {
+                        String title = items.getJSONObject(i).getString("title");
+                        String link = items.getJSONObject(i).getString("link");
+                        productDetails[i][0] = title;
+                        productDetails[i][1] = link;
+                    }
 
-
-
-
-
-
-
-
-                    Log.d(TAG, "result=" + items);
-                    // use JSONObject to parse result to select items array
-                    // TODO
-
-                    return items.toString(4);
-
+//                    return items.toString(4);
+                    return productDetails[0][0] + "\nURL: " + productDetails[0][1] + "\n\n\n" + productDetails[1][0] + "\nURL: " + productDetails[1][1] + "\n\n\n" + productDetails[2][0] + "\nURL: " + productDetails[2][1] + "\n\n\n" + productDetails[3][0] + "\nURL: " + productDetails[3][1] + "\n\n\n" + productDetails[4][0] + "\nURL: " + productDetails[4][1] + "\n";
                 }else{
 
                     // response problem
