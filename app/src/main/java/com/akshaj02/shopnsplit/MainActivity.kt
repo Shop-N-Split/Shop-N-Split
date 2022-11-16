@@ -29,6 +29,12 @@ class MainActivity : AppCompatActivity() {
         val emailAddress = findViewById<EditText>(R.id.emailAddress)
         val userPassword = findViewById<EditText>(R.id.password)
         loginButton.setOnClickListener {
+            if (FirebaseAuth.getInstance().currentUser != null) {
+                // User is signed in (getCurrentUser() will be null if not signed in)
+                val intent = Intent(this, productSearch::class.java)
+                startActivity(intent)
+                finish()
+            }
             when {
                 TextUtils.isEmpty(emailAddress.text.toString().trim { it <= ' ' }) -> {
                     Toast.makeText(
@@ -45,12 +51,18 @@ class MainActivity : AppCompatActivity() {
                         Toast.LENGTH_SHORT
                     ).show()
                 }
+                //login the user with last registered email and password
+
 
 
 
                 else -> {
                     val email: String = emailAddress.text.toString().trim { it <= ' ' }
                     val password: String = userPassword.text.toString().trim { it <= ' ' }
+
+                    //val auth = FirebaseAuth.getInstance()
+
+
 
                     // Create an instance and create a register a user with email and password.
                     FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
@@ -67,7 +79,7 @@ class MainActivity : AppCompatActivity() {
                                     Toast.LENGTH_SHORT
                                 ).show()
 
-                                val intent = Intent(this, MainActivity::class.java)
+                                val intent = Intent(this, productSearch::class.java)
                                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                                 intent.putExtra("user_id", firebaseUser.uid)
                                 intent.putExtra("email_id", email)
@@ -82,8 +94,7 @@ class MainActivity : AppCompatActivity() {
                                 ).show()
                             }
                         }
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
+
                 }
             }
 
