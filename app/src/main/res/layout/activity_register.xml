@@ -4,13 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/green"
+    >
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
+        android:fontFamily="@font/quicksand_bold"
         android:text="Register"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#221e22"
@@ -25,6 +28,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="228dp"
         android:ems="10"
+        android:fontFamily="@font/quicksand_regular"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:textColorHint="#757575"
@@ -42,6 +46,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="160dp"
         android:ems="10"
+        android:fontFamily="@font/quicksand_regular"
         android:hint="Name"
         android:inputType="text"
         android:textColorHint="#757575"
@@ -59,6 +64,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="292dp"
         android:ems="10"
+        android:fontFamily="@font/quicksand_regular"
         android:hint="Password"
         android:inputType="textPassword"
         android:textColorHint="#757575"
@@ -75,6 +81,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="368dp"
         android:ems="10"
+        android:fontFamily="@font/quicksand_regular"
         android:hint="Confirm Password"
         android:inputType="textPassword"
         android:textColorHint="#757575"
@@ -90,7 +97,7 @@
         android:layout_height="42dp"
         android:layout_marginBottom="240dp"
         android:background="@drawable/ripple_effect"
-        android:fontFamily="sans-serif"
+        android:fontFamily="@font/quicksand_semibold"
         android:gravity="center"
         android:text="Register"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -104,6 +111,7 @@
 <!--    google sign in-->
     <com.google.android.gms.common.SignInButton
         android:id="@+id/googleSignInButton"
+        android:fontFamily="@font/quicksand_semibold"
         android:layout_width="120dp"
         android:layout_height="42dp"
         app:layout_constraintBottom_toBottomOf="parent"

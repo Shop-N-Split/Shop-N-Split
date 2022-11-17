@@ -16,7 +16,15 @@
     <color name="colorTextSecondary">#FFBDBDBD</color>
     <color name="primary">#1B023B</color>
     <color name="secondary">#FF03DAC5</color>
-
+    <!--Theme Color range-->
+    <color name="primary_blue">#1C2639</color>
+    <color name="dark_blue">#384E78</color>
+    <color name="blue">#5874DC</color>
+    <color name="pastel_red">#E06C78</color>
+    <color name="dark_orange">#FA9284</color>
+    <color name="dark_green">#6AAB9C</color>
+    <color name="green">#6FC2AF</color>
+    <!--Theme Color range-->
     <color name="night_mode">#6124B1</color>
     <color name="notifications">#13B2C3</color>
     <color name="private_account">#E6A326</color>
