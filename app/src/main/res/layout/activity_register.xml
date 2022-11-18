@@ -4,122 +4,129 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/green"
-    >
+    android:background="@color/primary_green"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="338dp"
+        android:layout_height="455dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/shape_login_panel"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
         android:fontFamily="@font/quicksand_bold"
         android:text="Register"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="#221e22"
+        android:textColor="@color/Secondary_green"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/emailAddress"
-        android:layout_width="290dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="228dp"
-        android:ems="10"
-        android:fontFamily="@font/quicksand_regular"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:textColorHint="#757575"
-        app:layout_constraintBottom_toTopOf="@+id/password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.589"
-        android:autofillHints="" />
+        />
 
     <EditText
         android:id="@+id/username"
         android:layout_width="290dp"
         android:layout_height="48dp"
-        android:layout_marginTop="160dp"
-        android:ems="10"
-        android:fontFamily="@font/quicksand_regular"
+        android:autofillHints=""
+        android:textSize="14dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/quicksand_medium"
         android:hint="Name"
         android:inputType="text"
-        android:textColorHint="#757575"
-        app:layout_constraintBottom_toTopOf="@+id/emailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.632"
-        android:autofillHints="" />
+        android:textColorHint="@color/primary_green"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+
+        />
+
+    <EditText
+        android:id="@+id/emailAddress"
+        android:layout_width="290dp"
+        android:layout_height="48dp"
+        android:autofillHints=""
+        android:textSize="14dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/quicksand_medium"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/primary_green"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="290dp"
         android:layout_height="48dp"
-        android:layout_marginTop="292dp"
-        android:ems="10"
-        android:fontFamily="@font/quicksand_regular"
+        android:autofillHints=""
+        android:textSize="14dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/quicksand_medium"
         android:hint="Password"
         android:inputType="textPassword"
-        android:textColorHint="#757575"
-        app:layout_constraintBottom_toTopOf="@+id/confirmPass"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        android:textColorHint="@color/primary_green"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/emailAddress" />
+
 
     <EditText
         android:id="@+id/confirmPass"
         android:layout_width="290dp"
         android:layout_height="48dp"
-        android:layout_marginTop="368dp"
-        android:ems="10"
-        android:fontFamily="@font/quicksand_regular"
+        android:autofillHints=""
+        android:textSize="14dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/quicksand_medium"
         android:hint="Confirm Password"
         android:inputType="textPassword"
-        android:textColorHint="#757575"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        android:textColorHint="@color/primary_green"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <TextView
         android:id="@+id/registerButton"
-        android:layout_width="120dp"
+        android:layout_width="290dp"
         android:layout_height="42dp"
-        android:layout_marginBottom="240dp"
-        android:background="@drawable/ripple_effect"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_corner"
         android:fontFamily="@font/quicksand_semibold"
         android:gravity="center"
         android:text="Register"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="#FFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/white"
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/confirmPass" />
 
-<!--    google sign in-->
     <com.google.android.gms.common.SignInButton
         android:id="@+id/googleSignInButton"
-        android:fontFamily="@font/quicksand_semibold"
-        android:layout_width="120dp"
+        android:layout_width="288dp"
         android:layout_height="42dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerButton"
-        app:layout_constraintVertical_bias="0.04" />
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/quicksand_semibold"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/registerButton" />
+
+    <!--    google sign in-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
