@@ -31,7 +31,7 @@
         android:layout_marginTop="48dp"
         android:fontFamily="@font/quicksand_bold"
         android:gravity="center"
-        android:text="Log In"
+        android:text="Log in"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/Secondary_green"
         app:layout_constraintEnd_toEndOf="parent"
