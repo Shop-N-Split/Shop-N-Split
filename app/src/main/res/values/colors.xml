@@ -21,6 +21,7 @@
     <color name="primary_blue">#1C2639</color>
     <color name="dark_blue">#384E78</color>
     <color name="blue">#5874DC</color>
+    <color name="lavender">#B1B2FF</color>
     <color name="pastel_red">#E06C78</color>
     <color name="dark_orange">#FA9284</color>
     <color name="dark_green">#6AAB9C</color>
@@ -34,4 +35,5 @@
     <color name="notifications">#13B2C3</color>
     <color name="private_account">#E6A326</color>
     <color name="security">#D95F69</color>
+    <color name="white_trans">#20ffffff</color>
 </resources>

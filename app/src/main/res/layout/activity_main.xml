@@ -88,7 +88,7 @@
         android:fontFamily="@font/quicksand_semibold"
         android:gravity="center"
         android:background="@drawable/rounded_corner"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:text="Sign In"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
@@ -103,11 +103,9 @@
         android:fontFamily="@font/quicksand_semibold"
         android:gravity="center"
         android:background="@drawable/rounded_corner"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:text="Register"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-
-
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout" />
