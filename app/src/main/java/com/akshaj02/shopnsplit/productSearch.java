@@ -299,7 +299,7 @@ public class productSearch extends Activity {
 
                     // return the links to be displayed
                     return  "Walmart" + "\n" + walmartTitle + "\n" + walmartPriceFloat + "\n\n" + "Target" + "\n" + targetTitle + "\n" + targetPrice
-                            /*"Kroger" + "\n\n" + krogerTitle + "\n" + krogerPrice + "\n\n\n" + krogerLink*/  + "\n\nFUCK YES";
+                            /*"Kroger" + "\n\n" + krogerTitle + "\n" + krogerPrice + "\n\n\n" + krogerLink*/;
                     //
 
                 }

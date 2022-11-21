@@ -22,6 +22,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val resetPassword = findViewById<TextView>(R.id.forgotPassword)
+        resetPassword.setOnClickListener {
+            val intent = Intent(this, forgotPassword::class.java)
+            startActivity(intent)
+        }
+
         val loginButton = findViewById<TextView>(R.id.signin)
         val emailAddress = findViewById<EditText>(R.id.emailAddress)
         val userPassword = findViewById<EditText>(R.id.password)

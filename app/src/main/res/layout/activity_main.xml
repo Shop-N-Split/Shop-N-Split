@@ -10,18 +10,28 @@
 
     <RelativeLayout
         android:id="@+id/linearLayout"
-        android:layout_width="338dp"
-        android:layout_height="455dp"
+        android:layout_width="339dp"
+        android:layout_height="452dp"
         android:layout_marginBottom="64dp"
         android:background="@drawable/shape_login_panel"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        >
+        app:layout_constraintVertical_bias="0.289">
 
+        <TextView
+            android:id="@+id/forgotPassword"
+            android:layout_width="120dp"
+            android:layout_height="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="194dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="232dp"
+            android:text="Forgot password?" />
     </RelativeLayout>
 
     <TextView
