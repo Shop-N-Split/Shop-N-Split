@@ -9,6 +9,9 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import android.content.Intent
 import android.widget.TextView
+//import google sign in package
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 
 
 class MainActivity : AppCompatActivity() {
@@ -27,6 +30,30 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, forgotPassword::class.java)
             startActivity(intent)
         }
+
+
+        val googleSignin = findViewById<com.google.android.gms.common.SignInButton>(R.id.googleSignInButton)
+        googleSignin.setOnClickListener {
+            val auth = FirebaseAuth.getInstance()
+            val GoogleSignInClient = GoogleSignIn.getClient(this, GoogleSignInOptions.DEFAULT_SIGN_IN)
+            val signInIntent = GoogleSignInClient.signInIntent
+            startActivityForResult(signInIntent, 1)
+
+            if (auth.currentUser != null) {
+                val intent = Intent(this, productSearch::class.java)
+                startActivity(intent)
+            }
+            else {
+                Toast.makeText(
+                    this@MainActivity,
+                    "Please sign in.",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        }
+
+        //once google sign in is done, go to home page
+
 
         val loginButton = findViewById<TextView>(R.id.signin)
         val emailAddress = findViewById<EditText>(R.id.emailAddress)

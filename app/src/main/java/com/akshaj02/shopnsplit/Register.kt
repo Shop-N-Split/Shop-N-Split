@@ -21,15 +21,9 @@ class Register : AppCompatActivity() {
         val userPassword = findViewById<EditText>(R.id.password)
         val confirmPass = findViewById<EditText>(R.id.confirmPass)
         val username = findViewById<EditText>(R.id.username)
-        val googleSignin = findViewById<com.google.android.gms.common.SignInButton>(R.id.googleSignInButton)
 
-        googleSignin.setOnClickListener {
-            Toast.makeText(
-                this@Register,
-                "kaam chalra madarchod",
-                Toast.LENGTH_SHORT
-            ).show()
-        }
+
+
 
         registerButton.setOnClickListener {
             when {
