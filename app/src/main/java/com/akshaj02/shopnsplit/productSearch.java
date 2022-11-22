@@ -14,6 +14,7 @@ import java.util.Scanner;
 import android.app.Activity;
 import android.content.Context;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 
 import android.os.Bundle;
@@ -41,6 +42,7 @@ public class productSearch extends Activity {
 
     EditText mEditText;
     Button mButton;
+    Button mEPButton;
     TextView mTextView;
     ProgressBar mProgressBar;
     Context context;
@@ -49,6 +51,7 @@ public class productSearch extends Activity {
     static String result = null;
     Integer responseCode = null;
     String responseMessage = "";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +64,8 @@ public class productSearch extends Activity {
         mButton = findViewById(R.id.button);
         mTextView = findViewById(R.id.textView1);
         mProgressBar = findViewById(R.id.pb_loading_indicator);
+        mEPButton = findViewById(R.id.button2);
+
 
         // button onClick
         mButton.setOnClickListener(new View.OnClickListener() {
@@ -97,6 +102,13 @@ public class productSearch extends Activity {
                 GoogleSearchAsyncTask searchTask = new GoogleSearchAsyncTask();
                 searchTask.execute(url);
 
+            }
+        });
+
+        mEPButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(productSearch.this, ExplorePrices.class);
+                startActivity(intent);
             }
         });
 

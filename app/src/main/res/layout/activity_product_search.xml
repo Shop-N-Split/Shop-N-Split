@@ -31,7 +31,7 @@ android:layout_height="match_parent">
     android:visibility="gone" />
 
 
-<TextView
+    <TextView
     android:id="@+id/textView1"
     android:layout_below="@+id/pb_loading_indicator"
     android:layout_width="fill_parent"
@@ -42,7 +42,15 @@ android:layout_height="match_parent">
     android:padding="10sp"
     android:text="Result" />
 
-
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Explore Price" />
 
 
 </RelativeLayout>
