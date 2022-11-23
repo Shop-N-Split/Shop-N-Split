@@ -43,6 +43,7 @@ public class productSearch extends Activity {
     EditText mEditText;
     Button mButton;
     Button mEPButton;
+    Button mSLButton;
     TextView mTextView;
     ProgressBar mProgressBar;
     Context context;
@@ -65,6 +66,7 @@ public class productSearch extends Activity {
         mTextView = findViewById(R.id.textView1);
         mProgressBar = findViewById(R.id.pb_loading_indicator);
         mEPButton = findViewById(R.id.button2);
+        mSLButton = findViewById(R.id.button3);
 
 
         // button onClick
@@ -108,6 +110,13 @@ public class productSearch extends Activity {
         mEPButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(productSearch.this, ExplorePrices.class);
+                startActivity(intent);
+            }
+        });
+
+        mSLButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(productSearch.this, ChecklistPage.class);
                 startActivity(intent);
             }
         });
