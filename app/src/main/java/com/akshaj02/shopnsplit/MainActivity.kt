@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
             startActivityForResult(signInIntent, 1)
 
             if (auth.currentUser != null) {
-                val intent = Intent(this, productSearch::class.java)
+                val intent = Intent(this, ChecklistPage::class.java)
                 startActivity(intent)
             }
             else {
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
         loginButton.setOnClickListener {
             if (FirebaseAuth.getInstance().currentUser != null) {
                 // User is signed in (getCurrentUser() will be null if not signed in)
-                val intent = Intent(this, productSearch::class.java)
+                val intent = Intent(this, ChecklistPage::class.java)
                 startActivity(intent)
                 finish()
             }
@@ -109,7 +109,7 @@ class MainActivity : AppCompatActivity() {
                                     Toast.LENGTH_SHORT
                                 ).show()
 
-                                val intent = Intent(this, productSearch::class.java)
+                                val intent = Intent(this, ChecklistPage::class.java)
                                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                                 intent.putExtra("user_id", firebaseUser.uid)
                                 intent.putExtra("email_id", email)

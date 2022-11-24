@@ -7,8 +7,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import com.akshaj02.shopnsplit.Adapter.ToDoAdapter;
 import com.akshaj02.shopnsplit.Model.ToDoModel;
@@ -35,6 +37,7 @@ public class ChecklistPage extends AppCompatActivity implements OnDialogCloseLis
     private List<ToDoModel> mList;
     private Query query;
     private ListenerRegistration listenerRegistration;
+    private Button mExplorePrices;
 
 
     @Override
@@ -45,6 +48,7 @@ public class ChecklistPage extends AppCompatActivity implements OnDialogCloseLis
         recyclerView = findViewById(R.id.recycerlview);
         mFab = findViewById(R.id.floatingActionButton);
         firestore = FirebaseFirestore.getInstance();
+        mExplorePrices = findViewById(R.id.ExpPrices);
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(ChecklistPage.this));
@@ -53,6 +57,19 @@ public class ChecklistPage extends AppCompatActivity implements OnDialogCloseLis
             @Override
             public void onClick(View v) {
                 AddNewTask.newInstance().show(getSupportFragmentManager() , AddNewTask.TAG);
+            }
+        });
+
+        //When ExpPrices is clicked it will take you to the Explore Prices page and sent the list of items to the next page
+        mExplorePrices.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChecklistPage.this, ExplorePrices.class);
+//                intent.putExtra("list", (ArrayList) mList);
+                startActivity(intent);
+
+                //second way to send data to the next page
+                Intent intent2 = new Intent(ChecklistPage.this, ExplorePrices.class);
             }
         });
 
