@@ -29,4 +29,7 @@ public class DataModel {
     public boolean isExpandable() {
         return isExpandable;
     }
+
+    public static class myProductSearcher {
+    }
 }

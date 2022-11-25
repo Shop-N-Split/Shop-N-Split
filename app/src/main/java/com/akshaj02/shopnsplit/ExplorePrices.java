@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -30,6 +32,25 @@ public class ExplorePrices extends AppCompatActivity {
 
         mList = new ArrayList<>();
 
+//        Bundle extras = getIntent().getExtras();
+//        ArrayList<String> arrayList = extras.getStringArrayList("productlist");
+//        ListView listView = findViewById(R.id.listView);
+//        ArrayAdapter<String> items = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arrayList);
+//        listView.setAdapter(items);
+
+//        Bundle extras = getIntent().getExtras();
+//        ArrayList<String> arrayList = extras.getStringArrayList("productlist");
+////        ListView listView = findViewById(R.id.listView);
+//        ArrayAdapter<String> items = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arrayList);
+////        listView.setAdapter(items);
+//        //Convert the arraylist to a string
+//        String str = arrayList.toString();
+//        //Remove the brackets
+//        String str1 = str.substring(1, str.length()-1);
+//        //Split the string based on comma
+//        String[] arr = str1.split(",");
+
+
 //        TextView TotalPrice = findViewById(R.id.TotalPrice);
 
         //list1
@@ -42,6 +63,12 @@ public class ExplorePrices extends AppCompatActivity {
         nestedList2.add("Milk");
         nestedList2.add("Bread");
         nestedList2.add("Eggs");
+
+        //Loop through the array and add the items to the nested list
+//        for (String s : arr) {
+//            nestedList1.add(s);
+//            nestedList2.add(s);
+//        }
 
         mList.add(new DataModel(nestedList1 , "Walmart Total"));
         mList.add(new DataModel( nestedList2,"Target Total"));

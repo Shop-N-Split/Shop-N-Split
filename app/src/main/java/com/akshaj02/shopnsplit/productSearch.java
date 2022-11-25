@@ -43,7 +43,6 @@ public class productSearch extends Activity {
     EditText mEditText;
     Button mButton;
     Button mEPButton;
-    Button mSLButton;
     TextView mTextView;
     ProgressBar mProgressBar;
     Context context;
@@ -52,6 +51,7 @@ public class productSearch extends Activity {
     static String result = null;
     Integer responseCode = null;
     String responseMessage = "";
+    String product = "Apples";
 
 
     @Override
@@ -66,46 +66,23 @@ public class productSearch extends Activity {
         mTextView = findViewById(R.id.textView1);
         mProgressBar = findViewById(R.id.pb_loading_indicator);
         mEPButton = findViewById(R.id.button2);
-        mSLButton = findViewById(R.id.button3);
 
 
-        // button onClick
-        mButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+        String urlString = makeURL(product);
 
-                final String searchString = mEditText.getText().toString();
-
-                // hide keyboard
-                InputMethodManager inputManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-
-                // remove spaces
-                String searchStringNoSpaces = searchString.replace(" ", "+");
-
-                // Your Google API key
-                // TODO replace with your value
-                String key="AIzaSyDqDikiIyDl4LiWUk7sr2_x3F9dI7URkpg";
-
-                // Your Google Search Engine ID
-                // TODO replace with your value
-                String cx = "833e27497336947cd";
-
-                String urlString = "https://www.googleapis.com/customsearch/v1?q=" + searchStringNoSpaces + "&key=" + key + "&cx=" + cx + "&alt=json";
-                URL url = null;
-                try {
-                    url = new URL(urlString);
-                } catch (MalformedURLException e) {
-                    Log.e(TAG, "ERROR converting String to URL " + e.toString());
-                }
-                Log.d(TAG, "Url = "+  urlString);
+        URL url = null;
+        try {
+            url = new URL(urlString);
+        } catch (MalformedURLException e) {
+            Log.e(TAG, "ERROR converting String to URL " + e.toString());
+        }
+        Log.d(TAG, "Url = " + urlString);
 
 
-                // start AsyncTask
-                GoogleSearchAsyncTask searchTask = new GoogleSearchAsyncTask();
-                searchTask.execute(url);
+        // start AsyncTask
+        GoogleSearchAsyncTask searchTask = new GoogleSearchAsyncTask();
+        searchTask.execute(url);
 
-            }
-        });
 
         mEPButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -114,23 +91,25 @@ public class productSearch extends Activity {
             }
         });
 
-        mSLButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(productSearch.this, ChecklistPage.class);
-                startActivity(intent);
-            }
-        });
-
     }
 
+    public static String makeURL(String product) {
+        String noSpace = product.replace(" ", "+");
+
+        String key = "AIzaSyDqDikiIyDl4LiWUk7sr2_x3F9dI7URkpg";
+        String cx = "833e27497336947cd";
+        String url = "https://www.googleapis.com/customsearch/v1?q=" + noSpace + "&key=" + key + "&cx=" + cx + "&alt=json";
+
+        return url;
+    }
 
     private class GoogleSearchAsyncTask extends AsyncTask<URL, Integer, String> {
 
-        protected void onPreExecute(){
+        protected void onPreExecute() {
 
             Log.d(TAG, "AsyncTask - onPreExecute");
             // show mProgressBar
-            mProgressBar.setVisibility(View.VISIBLE);
+            mTextView.setText(makeURL(product));
 
         }
 
@@ -163,7 +142,7 @@ public class productSearch extends Activity {
 
             try {
 
-                if(responseCode != null && responseCode == 200) {
+                if (responseCode != null && responseCode == 200) {
 
                     // response OK
                     BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
@@ -231,8 +210,7 @@ public class productSearch extends Activity {
                     String walmartTitle = "";
                     String walmartPrice = "0";
                     float walmartPriceFloat = 0;
-                    if (doc != null)
-                    {
+                    if (doc != null) {
                         //select html with custom css selector
                         walmartTitle = doc.select("h1.f3.b.lh-copy.dark-gray.mt1.mb2").text();
                         walmartPrice = doc.select("span.inline-flex.flex-column").text();
@@ -248,8 +226,7 @@ public class productSearch extends Activity {
                     Document doc2 = Jsoup.connect(targetLink).get();
                     String targetTitle = "";
                     String targetPrice = "0";
-                    if (doc != null)
-                    {
+                    if (doc != null) {
                         targetTitle = doc2.select("h1.Heading__StyledHeading-sc-1ihrzmk-0.jmSnUp.h-text-bold.h-margin-b-tight").text();
                         URL url2 = new URL(targetLink);
                         URLConnection connection = url2.openConnection();
@@ -260,7 +237,7 @@ public class productSearch extends Activity {
                         String line2;
                         StringBuilder html = new StringBuilder();
                         while ((line2 = reader.readLine()) != null) {
-                          html.append(line2);
+                            html.append(line2);
                         }
                         reader.close();
                         //Find the price
@@ -282,50 +259,12 @@ public class productSearch extends Activity {
 //                    krogerPrice = krogerPrice.replaceAll("[^\\d.]", "");
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                     // return the links to be displayed
-                    return  "Walmart" + "\n" + walmartTitle + "\n" + walmartPriceFloat + "\n\n" + "Target" + "\n" + targetTitle + "\n" + targetPrice
+                    return "Walmart" + "\n" + walmartTitle + "\n" + walmartPriceFloat + "\n\n" + "Target" + "\n" + targetTitle + "\n" + targetPrice
                             /*"Kroger" + "\n\n" + krogerTitle + "\n" + krogerPrice + "\n\n\n" + krogerLink*/;
                     //
 
-                }
-
-                else{
+                } else {
 
                     // response problem
 
@@ -344,18 +283,26 @@ public class productSearch extends Activity {
             return null;
         }
 
-        protected void onProgressUpdate(Integer... progress) {
-
-            Log.d(TAG, "AsyncTask - onProgressUpdate, progress=" + progress);
-
-        }
+//        protected void onProgressUpdate(Integer... progress) {
+//
+//            Log.d(TAG, "AsyncTask - onProgressUpdate, progress=" + progress);
+//
+//        }
 
         protected void onPostExecute(String result) {
 
-            Log.d(TAG, "AsyncTask - onPostExecute, result=" + result);
+           // Log.d(TAG, "AsyncTask - onPostExecute, result=" + result);
+
+
+            //add a confirm button. run the async task when the button is clicked
+            //add the answers from doInBackground to an arraylist.
+            //PreExecute: display a loading message
+            //PostExecute: move to another activity and display the results there
+
+
 
             // hide mProgressBar
-            mProgressBar.setVisibility(View.GONE);
+            //mProgressBar.setVisibility(View.GONE);
 
             // make TextView scrollable
             mTextView.setMovementMethod(new ScrollingMovementMethod());

@@ -33,14 +33,14 @@ android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="242dp"
         android:layout_below="@+id/pb_loading_indicator"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="7dp"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="144dp"
+        android:layout_marginBottom="374dp"
         android:maxLines="1000"
         android:padding="10sp"
         android:scrollbars="vertical"
@@ -67,6 +67,19 @@ android:layout_height="match_parent">
         android:layout_marginBottom="16dp"
         android:layout_toStartOf="@+id/button2"
         android:text="Checklist" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="375dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginBottom="-4dp" />
+
 
 
 </RelativeLayout>
