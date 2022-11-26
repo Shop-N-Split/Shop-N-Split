@@ -51,7 +51,7 @@ public class productSearch extends Activity {
     static String result = null;
     Integer responseCode = null;
     String responseMessage = "";
-    String product = "Apples";
+    String product = "Whole milk 1gal";
 
 
     @Override
@@ -109,7 +109,8 @@ public class productSearch extends Activity {
 
             Log.d(TAG, "AsyncTask - onPreExecute");
             // show mProgressBar
-            mTextView.setText(makeURL(product));
+            mTextView.setText("Loading...");
+
 
         }
 

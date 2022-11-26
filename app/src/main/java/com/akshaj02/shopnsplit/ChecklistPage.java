@@ -26,7 +26,6 @@ import com.google.firebase.firestore.QuerySnapshot;
 import org.checkerframework.checker.units.qual.C;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class ChecklistPage extends AppCompatActivity implements OnDialogCloseListner{
@@ -36,10 +35,11 @@ public class ChecklistPage extends AppCompatActivity implements OnDialogCloseLis
     private FirebaseFirestore firestore;
     private ToDoAdapter adapter;
     private List<ToDoModel> mList;
-    private ArrayList<String> products = new ArrayList<>();
     private Query query;
     private ListenerRegistration listenerRegistration;
     private Button mExplorePrices;
+
+
 
 
     @Override
@@ -63,33 +63,27 @@ public class ChecklistPage extends AppCompatActivity implements OnDialogCloseLis
         });
 
         //When ExpPrices is clicked it will take you to the Explore Prices page and sent the list of items to the next page
+        mExplorePrices.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChecklistPage.this, productSearch.class);
+//                intent.putExtra("list", (ArrayList) mList);
+                startActivity(intent);
+
+                //second way to send data to the next page
+                //Intent intent2 = new Intent(ChecklistPage.this, ExplorePrices.class);
+            }
+        });
 
         mList = new ArrayList<>();
         adapter = new ToDoAdapter(ChecklistPage.this , mList);
-
-        // Copy mList to products
-//        for (int i = 0; i < mList.size(); i++) {
-//            products.add(mList.get(i).getTask());
-//        }
-
-        //Convert mList to String
 
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(new TouchHelper(adapter));
         itemTouchHelper.attachToRecyclerView(recyclerView);
         showData();
         recyclerView.setAdapter(adapter);
-
-
-
-        mExplorePrices.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ChecklistPage.this, productSearch.class);
-                intent.putExtra("productlist", products);
-                startActivity(intent);
-            }
-        });
     }
+
     private void showData(){
         query = firestore.collection("task").orderBy("time" , Query.Direction.DESCENDING);
 
@@ -103,12 +97,6 @@ public class ChecklistPage extends AppCompatActivity implements OnDialogCloseLis
                         ToDoModel toDoModel = documentChange.getDocument().toObject(ToDoModel.class).withId(id);
                         mList.add(toDoModel);
                         adapter.notifyDataSetChanged();
-                        //Add to products
-//                        products.add(toDoModel.getTask());
-                        //Check if the item already exists in the list
-                        if (!products.contains(toDoModel.getTask())) {
-                            products.add(toDoModel.getTask());
-                        }
                     }
                 }
                 listenerRegistration.remove();
