@@ -8,9 +8,11 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 
@@ -52,6 +54,12 @@ public class productSearch extends Activity {
     Integer responseCode = null;
     String responseMessage = "";
     String product = "Whole milk 1gal";
+    String product2 = "Apples";
+    String product3 = "Bananas";
+
+    //arraylist of products and prices
+    ArrayList<String> products = new ArrayList<>();
+
 
 
     @Override
@@ -83,6 +91,21 @@ public class productSearch extends Activity {
         GoogleSearchAsyncTask searchTask = new GoogleSearchAsyncTask();
         searchTask.execute(url);
 
+        String urlString2 = makeURL(product2);
+
+        URL url2 = null;
+        try {
+            url2 = new URL(urlString2);
+        } catch (MalformedURLException e) {
+            Log.e(TAG, "ERROR converting String to URL " + e.toString());
+        }
+
+        GoogleSearchAsyncTask searchTask2 = new GoogleSearchAsyncTask();
+        searchTask2.execute(url2);
+        //call the showResults method
+
+
+
 
         mEPButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -109,7 +132,7 @@ public class productSearch extends Activity {
 
             Log.d(TAG, "AsyncTask - onPreExecute");
             // show mProgressBar
-            mTextView.setText("Loading...");
+           // mTextView.setText("Loading...");
 
 
         }
@@ -250,20 +273,8 @@ public class productSearch extends Activity {
                         String priceTarget = html.substring(start, end);
                         targetPrice = priceTarget.replaceAll("[^\\d.]", "");
                     }
-
-//                    //kroger
-//                    Document doc3 = Jsoup.connect(krogerLink).get();
-//                    String krogerTitle = doc3.select("h1.ProductDetails-header.font-bold").text();
-//                    String krogerPrice = doc3.select("mark.kds-Price-promotional.kds-Price-promotional--plain.kds-Price-promotional--decorated").text();
-//                    //select 1st
-//                    krogerPrice = krogerPrice.substring(0, krogerPrice.indexOf(" "));
-//                    krogerPrice = krogerPrice.replaceAll("[^\\d.]", "");
-
-
                     // return the links to be displayed
-                    return "Walmart" + "\n" + walmartTitle + "\n" + walmartPriceFloat + "\n\n" + "Target" + "\n" + targetTitle + "\n" + targetPrice
-                            /*"Kroger" + "\n\n" + krogerTitle + "\n" + krogerPrice + "\n\n\n" + krogerLink*/;
-                    //
+                    return "Walmart" + "\n" + walmartTitle + "\n" + walmartPriceFloat + "\n\n" + "Target" + "\n" + targetTitle + "\n" + targetPrice;
 
                 } else {
 
@@ -290,28 +301,30 @@ public class productSearch extends Activity {
 //
 //        }
 
+        @SuppressLint("SetTextI18n")
         protected void onPostExecute(String result) {
 
-           // Log.d(TAG, "AsyncTask - onPostExecute, result=" + result);
-
-
-            //add a confirm button. run the async task when the button is clicked
-            //add the answers from doInBackground to an arraylist.
-            //PreExecute: display a loading message
-            //PostExecute: move to another activity and display the results there
-
-
-
-            // hide mProgressBar
-            //mProgressBar.setVisibility(View.GONE);
 
             // make TextView scrollable
             mTextView.setMovementMethod(new ScrollingMovementMethod());
             //display the links
-            mTextView.setText(result);
+            products.add(result);
+            showResults();
+//            Intent intent = new Intent(productSearch.this, ExplorePrices.class);
+//            //intent.putExtra("products", products);
+//            startActivity(intent);
+
         }
 
 
+    }
+
+    public void showResults() {
+        //for loop to display all the results
+        int length;
+        for (length = 0; length<products.size(); length++){
+            mTextView.append(products.get(length) + "\n\n");
+        }
     }
 
 }
