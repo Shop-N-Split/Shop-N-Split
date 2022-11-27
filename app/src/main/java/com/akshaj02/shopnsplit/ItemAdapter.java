@@ -1,5 +1,6 @@
 package com.akshaj02.shopnsplit;
 
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +13,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.lang.invoke.LambdaConversionException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +20,9 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
 
     private final List<DataModel> mList;
     private List<String> list = new ArrayList<>();
+    private TextView TotalPrice;
+    private String WalmartTotal = "";
+    private String TargetTotal = "";
 
     public ItemAdapter(List<DataModel> mList){
         this.mList  = mList;
@@ -28,8 +31,32 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
     @Override
     public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view  = LayoutInflater.from(parent.getContext()).inflate(R.layout.each_item , parent , false);
+        //display total in totalPrice TextView
         return new ItemViewHolder(view);
     }
+
+//    @Override
+//    protected void onCreate (Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_explore_prices);
+//        TotalPrice = findViewById(R.id.totalPrice);
+//        if (savedInstanceState == null) {
+//            Bundle extras = getIntent().getExtras();
+//            if(extras == null) {
+//                WalmartTotal= null;
+//                TargetTotal= null;
+//            } else {
+//                WalmartTotal= extras.getString("WalmartTotal");
+//                TargetTotal= extras.getString("TargetTotal");
+//            }
+//        } else {
+//            WalmartTotal= (String) savedInstanceState.getSerializable("WalmartTotal");
+//            TargetTotal= (String) savedInstanceState.getSerializable("TargetTotal");
+//        }
+//        WalmartTotal = getIntent().getStringExtra("WalmartTotal");
+//        TargetTotal = getIntent().getStringExtra("TargetTotal");
+//        TotalPrice.setText(WalmartTotal);
+//    }
 
     @Override
     public void onBindViewHolder(@NonNull ItemViewHolder holder, int position) {

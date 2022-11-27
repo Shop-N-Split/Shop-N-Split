@@ -38,6 +38,7 @@ public class ChecklistPage extends AppCompatActivity implements OnDialogCloseLis
     private Query query;
     private ListenerRegistration listenerRegistration;
     private Button mExplorePrices;
+    private String prodString = "";
 
 
 
@@ -67,11 +68,8 @@ public class ChecklistPage extends AppCompatActivity implements OnDialogCloseLis
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ChecklistPage.this, productSearch.class);
-//                intent.putExtra("list", (ArrayList) mList);
+                intent.putExtra("list", prodString);
                 startActivity(intent);
-
-                //second way to send data to the next page
-                //Intent intent2 = new Intent(ChecklistPage.this, ExplorePrices.class);
             }
         });
 
@@ -96,6 +94,8 @@ public class ChecklistPage extends AppCompatActivity implements OnDialogCloseLis
                         String id = documentChange.getDocument().getId();
                         ToDoModel toDoModel = documentChange.getDocument().toObject(ToDoModel.class).withId(id);
                         mList.add(toDoModel);
+                        //Append it to prodString
+                        prodString += toDoModel.getTask() + ",";
                         adapter.notifyDataSetChanged();
                     }
                 }
@@ -108,6 +108,7 @@ public class ChecklistPage extends AppCompatActivity implements OnDialogCloseLis
     @Override
     public void onDialogClose(DialogInterface dialogInterface) {
         mList.clear();
+        prodString = "";
         showData();
         adapter.notifyDataSetChanged();
     }
