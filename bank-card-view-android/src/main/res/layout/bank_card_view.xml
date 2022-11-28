@@ -1,0 +1,181 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bank_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:layout_margin="24dp"
+    android:background="@drawable/bank_card_view_gradient_ripe_malinka"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+
+    <!-- front card -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bankCardViewFront"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/bank_card_view_logo"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_card_horizontal"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/bank_card_view_chip"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/bank_card_view_chip"
+            app:layout_constraintStart_toStartOf="@+id/guideline_card_vertical"
+            app:layout_constraintTop_toTopOf="@+id/guideline_card_horizontal" />
+
+        <TextView
+            android:id="@+id/bank_card_view_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical"
+            android:letterSpacing="0.2"
+            android:text="@string/bank_card_name"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline_card_vertical" />
+
+        <TextView
+            android:id="@+id/bank_card_view_validate_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bank_card_validate"
+            android:textColor="#fff"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@+id/bank_card_view_name"
+            app:layout_constraintEnd_toEndOf="@+id/bank_card_view_name"
+            app:layout_constraintStart_toStartOf="@+id/guideline_card_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/bank_card_view_number" />
+
+        <TextView
+            android:id="@+id/bank_card_view_validate_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="@string/bank_card_validate_fake"
+            android:textColor="#fff"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@+id/bank_card_view_name"
+            app:layout_constraintStart_toEndOf="@+id/bank_card_view_validate_title"
+            app:layout_constraintTop_toBottomOf="@+id/bank_card_view_number" />
+
+
+        <TextView
+            android:id="@+id/bank_card_view_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:letterSpacing="0.4"
+            android:text="@string/bank_card_number"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/guideline_card_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/bank_card_view_chip" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_card_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.21" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_card_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- back card -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bankCardViewBack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/bank_card_view_faixa"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/cardview_dark_background"
+            app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+        <TextView
+            android:id="@+id/bank_card_view_cvv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bank_card_cvv_title"
+            android:textColor="#fff"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/bank_card_view_number_reverse" />
+
+        <TextView
+            android:id="@+id/bank_card_view_cvv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/bank_card_cvv"
+            android:textColor="#fff"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bank_card_view_cvv_title"
+            app:layout_constraintTop_toBottomOf="@+id/bank_card_view_number_reverse" />
+
+
+        <TextView
+            android:id="@+id/bank_card_view_number_reverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:letterSpacing="0.4"
+            android:text="@string/bank_card_number"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/bank_card_view_faixa" />
+
+        <androidx.constraintlayout.widget.Guideline
+
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.21" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

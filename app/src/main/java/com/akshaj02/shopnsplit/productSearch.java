@@ -69,10 +69,7 @@ public class productSearch extends Activity {
         context = getApplicationContext();
 
         // GUI init
-        mEditText = findViewById(R.id.edittext);
-        mButton = findViewById(R.id.button);
         mTextView = findViewById(R.id.textView1);
-        mProgressBar = findViewById(R.id.pb_loading_indicator);
         mEPButton = findViewById(R.id.button2);
 
 
