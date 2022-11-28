@@ -36,7 +36,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
 
         DataModel model = mList.get(position);
         holder.mTextView.setText(model.getItemText());
-//        holder.mPrice.setText(model.getItemPrice());
+        holder.mPrice.setText(model.getItemPrice());
 
         boolean isExpandable = model.isExpandable();
         holder.expandableLayout.setVisibility(isExpandable ? View.VISIBLE : View.GONE);
@@ -70,7 +70,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
         private LinearLayout linearLayout;
         private RelativeLayout expandableLayout;
         private TextView mTextView;
-//        private TextView mPrice;
+        private TextView mPrice;
         private ImageView mArrowImage;
         private RecyclerView nestedRecyclerView;
 
@@ -81,7 +81,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
             linearLayout = itemView.findViewById(R.id.linear_layout);
             expandableLayout = itemView.findViewById(R.id.expandable_layout);
             mTextView = itemView.findViewById(R.id.itemTv);
-//            mPrice = itemView.findViewById(R.id.totalPrice);
+            mPrice = itemView.findViewById(R.id.totalPrice);
             mArrowImage = itemView.findViewById(R.id.arro_imageview);
             nestedRecyclerView = itemView.findViewById(R.id.child_rv);
         }

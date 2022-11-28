@@ -79,8 +79,8 @@ public class ExplorePrices extends AppCompatActivity {
         nestedList1.add(wTitles[2]);
         nestedList1.add(wTitles[3]);
         nestedList1.add(wTitles[4]);
-        nestedList1.add(WalmartTotal);
-        nestedList1.add(TargetTotal);
+        //nestedList1.add(WalmartTotal);
+        //nestedList1.add(TargetTotal);
 
 
         List<String> nestedList2 = new ArrayList<>();
@@ -89,12 +89,12 @@ public class ExplorePrices extends AppCompatActivity {
         nestedList2.add(tTitles[2]);
         nestedList2.add(tTitles[3]);
         nestedList2.add(tTitles[4]);
-        nestedList2.add(WalmartTotal);
-        nestedList2.add(TargetTotal);
+        //nestedList2.add(WalmartTotal);
+        //nestedList2.add(TargetTotal);
 
 
-        mList.add(new DataModel(nestedList1 , "Walmart Total"));
-        mList.add(new DataModel(nestedList2,"Target Total"));
+        mList.add(new DataModel(nestedList1 , "Walmart", WalmartTotal));
+        mList.add(new DataModel(nestedList2,"Target", TargetTotal));
 
         adapter = new ItemAdapter(mList);
         recyclerView.setAdapter(adapter);

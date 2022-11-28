@@ -90,24 +90,25 @@ public class productSearch extends Activity {
         String[] products = product.split(",");
 
         //Make product as product1
-
+        //TODO: UnComment this part for the final version. This stops the google search from being called
         //for loop to iterate through the products
-        for (int i = 0; i < products.length; i++) {
-            product = products[i];
-            runSearch(product);
-        }
+//        for (int i = 0; i < products.length; i++) {
+//            product = products[i];
+//            runSearch(product);
+//        }
 
 
 
         mEPButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                //TODO: uncomment the variables for final version. read above TODO first.
                 Intent intent = new Intent(productSearch.this, ExplorePrices.class);
-                intent.putExtra("wTitles", walmartTitles);
-                intent.putExtra("tTitles", targetTitles);
-                intent.putExtra("wPrices", walmartPrices);
-                intent.putExtra("tPrices", targetPrices);
-                intent.putExtra("WalmartTotal", walmartPriceString);
-                intent.putExtra("TargetTotal", targetPriceString);
+                intent.putExtra("wTitles", /*walmartTitles*/ "Pro1#pro2#pro3#pro4#pro5");
+                intent.putExtra("tTitles", /*targetTitles*/ "Pro1#pro2#pro3#pro4#pro5");
+                intent.putExtra("wPrices", /*walmartPrices*/ "1.99#2.99#3.99#4.99#5.99");
+                intent.putExtra("tPrices", /*targetPrices*/ "2.99#3.99#4.99#5.99#6.99");
+                intent.putExtra("WalmartTotal", /*walmartPriceString*/ "10.99");
+                intent.putExtra("TargetTotal", /*targetPriceString*/ "11.99");
                 startActivity(intent);
             }
         });

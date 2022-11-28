@@ -6,13 +6,13 @@ public class DataModel {
 
     private final List<String> nestedList;
     private final String itemText;
-//    private final String itemPrice;
+    private final String itemPrice;
     private boolean isExpandable;
 
-    public DataModel(List<String> itemList, String itemText) {
+    public DataModel(List<String> itemList, String itemText, String itemPrice) {
         this.nestedList = itemList;
         this.itemText = itemText;
-//        this.itemPrice = itemPrice;
+        this.itemPrice = itemPrice;
         isExpandable = false;
     }
 
@@ -32,7 +32,7 @@ public class DataModel {
         return isExpandable;
     }
 
-//    public int getItemPrice() { return Integer.parseInt(itemPrice);}
+    public String getItemPrice() { return itemPrice;}
 
     public static class myProductSearcher {
     }

@@ -43,8 +43,8 @@
 
     <RelativeLayout
         android:id="@+id/Bottom_Layout"
-        android:layout_width="397dp"
-        android:layout_height="84dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/shape_login_panel"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -53,8 +53,8 @@
 
         <ImageView
             android:id="@+id/icon1"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
@@ -66,8 +66,8 @@
 
         <ImageView
             android:id="@+id/icon2"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
@@ -78,8 +78,8 @@
             app:srcCompat="@drawable/notes" />
         <ImageView
             android:id="@+id/icon3"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
@@ -89,8 +89,8 @@
             app:srcCompat="@drawable/bill" />
         <ImageView
             android:id="@+id/icon4"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
@@ -104,8 +104,11 @@
 
     <RelativeLayout
         android:id="@+id/Top_Layout"
-        android:layout_width="411dp"
-        android:layout_height="111dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
         android:background="@drawable/shape_login_panel"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -114,8 +117,8 @@
 
         <ImageView
             android:id="@+id/icon5"
-            android:layout_width="300dp"
-            android:layout_height="200dp"
+            android:layout_width="250dp"
+            android:layout_height="120dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
