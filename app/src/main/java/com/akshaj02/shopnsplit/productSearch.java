@@ -1,6 +1,8 @@
 package com.akshaj02.shopnsplit;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -8,11 +10,10 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.ArrayList;
 import java.util.Scanner;
-
-
+import java.util.ArrayList;
 import android.annotation.SuppressLint;
+
 import android.app.Activity;
 import android.content.Context;
 
@@ -42,8 +43,6 @@ import org.jsoup.nodes.Document;
 
 public class productSearch extends Activity {
 
-    EditText mEditText;
-    Button mButton;
     Button mEPButton;
     TextView mTextView;
     ProgressBar mProgressBar;
@@ -53,13 +52,16 @@ public class productSearch extends Activity {
     static String result = null;
     Integer responseCode = null;
     String responseMessage = "";
-    String product = "Whole milk 1gal";
-    String product2 = "Apples";
-    String product3 = "Bananas";
-
-    //arraylist of products and prices
-    ArrayList<String> products = new ArrayList<>();
-
+    String product = "";
+    float WTotal = 0;
+    float TTotal = 0;
+    String walmartPriceString = "";
+    String targetPriceString = "";
+    String walmartTitles = "";
+    String targetTitles = "";
+    String walmartPrices = "";
+    String targetPrices = "";
+    int counter = 0;
 
 
     @Override
@@ -73,6 +75,47 @@ public class productSearch extends Activity {
         mEPButton = findViewById(R.id.button2);
 
 
+        if (savedInstanceState == null) {
+            Bundle extras = getIntent().getExtras();
+            if(extras == null) {
+                product= null;
+            } else {
+                product= extras.getString("list");
+            }
+        } else {
+            product= (String) savedInstanceState.getSerializable("list");
+        }
+
+        //Store each item into product1, product2, product3, etc. by tokenizing the product string separated by commas
+        String[] products = product.split(",");
+
+        //Make product as product1
+
+        //for loop to iterate through the products
+        for (int i = 0; i < products.length; i++) {
+            product = products[i];
+            runSearch(product);
+        }
+
+
+
+        mEPButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(productSearch.this, ExplorePrices.class);
+                intent.putExtra("wTitles", walmartTitles);
+                intent.putExtra("tTitles", targetTitles);
+                intent.putExtra("wPrices", walmartPrices);
+                intent.putExtra("tPrices", targetPrices);
+                intent.putExtra("WalmartTotal", walmartPriceString);
+                intent.putExtra("TargetTotal", targetPriceString);
+                startActivity(intent);
+            }
+        });
+
+    }
+
+    //Make a function to make the URL
+    public void runSearch (String product) {
         String urlString = makeURL(product);
 
         URL url = null;
@@ -87,30 +130,6 @@ public class productSearch extends Activity {
         // start AsyncTask
         GoogleSearchAsyncTask searchTask = new GoogleSearchAsyncTask();
         searchTask.execute(url);
-
-        String urlString2 = makeURL(product2);
-
-        URL url2 = null;
-        try {
-            url2 = new URL(urlString2);
-        } catch (MalformedURLException e) {
-            Log.e(TAG, "ERROR converting String to URL " + e.toString());
-        }
-
-        GoogleSearchAsyncTask searchTask2 = new GoogleSearchAsyncTask();
-        searchTask2.execute(url2);
-        //call the showResults method
-
-
-
-
-        mEPButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(productSearch.this, ExplorePrices.class);
-                startActivity(intent);
-            }
-        });
-
     }
 
     public static String makeURL(String product) {
@@ -123,13 +142,22 @@ public class productSearch extends Activity {
         return url;
     }
 
+    public void totals(){
+        counter++;
+        if (counter == 5) {
+            mTextView.append("Walmart Total: " + WTotal + "\n");
+            mTextView.append("Target Total: " + TTotal + "\n");
+            //convert it to a string
+            walmartPriceString = String.valueOf(WTotal);
+            targetPriceString = String.valueOf(TTotal);
+        }
+    }
+
     private class GoogleSearchAsyncTask extends AsyncTask<URL, Integer, String> {
 
         protected void onPreExecute() {
 
             Log.d(TAG, "AsyncTask - onPreExecute");
-            // show mProgressBar
-           // mTextView.setText("Loading...");
 
 
         }
@@ -210,15 +238,6 @@ public class productSearch extends Activity {
                         }
                     }
 
-                    //same for kroger
-                    String krogerLink = "";
-                    for (String link : links) {
-                        if (link.contains("kroger")) {
-                            krogerLink = link;
-                            break;
-                        }
-                    }
-
                     conn.disconnect();
 
                     //now we have the links for each store
@@ -270,6 +289,18 @@ public class productSearch extends Activity {
                         String priceTarget = html.substring(start, end);
                         targetPrice = priceTarget.replaceAll("[^\\d.]", "");
                     }
+
+                    WTotal = WTotal + walmartPriceFloat;
+                    TTotal = TTotal + Float.parseFloat(targetPrice);
+
+
+                    //Save the walmartTitle in an array separated by commas
+                    walmartTitles = walmartTitles + walmartTitle + "#";
+                    targetTitles = targetTitles + targetTitle + "#";
+                    //Save the walmartPrice in an array separated by commas
+                    walmartPrices = walmartPrices + walmartPriceString + "#";
+                    targetPrices = targetPrices + targetPriceString + "#";
+
                     // return the links to be displayed
                     return "Walmart" + "\n" + walmartTitle + "\n" + walmartPriceFloat + "\n\n" + "Target" + "\n" + targetTitle + "\n" + targetPrice;
 
@@ -298,29 +329,32 @@ public class productSearch extends Activity {
 //
 //        }
 
-        @SuppressLint("SetTextI18n")
         protected void onPostExecute(String result) {
 
+            // Log.d(TAG, "AsyncTask - onPostExecute, result=" + result);
+
+
+            //add a confirm button. run the async task when the button is clicked
+            //add the answers from doInBackground to an arraylist.
+            //PreExecute: display a loading message
+            //PostExecute: move to another activity and display the results there
+
+
+
+            // hide mProgressBar
+            //mProgressBar.setVisibility(View.GONE);
 
             // make TextView scrollable
             mTextView.setMovementMethod(new ScrollingMovementMethod());
             //display the links
-            products.add(result);
-            showResults();
-//            Intent intent = new Intent(productSearch.this, ExplorePrices.class);
-//            //intent.putExtra("products", products);
-//            startActivity(intent);
+//            mTextView.setText(result);
 
-        }
-
-
-    }
-
-    public void showResults() {
-        //for loop to display all the results
-        int length;
-        for (length = 0; length<products.size(); length++){
-            mTextView.append(products.get(length) + "\n\n");
+            //display the links one after the other
+            String[] links = result.split("\n\n");
+            for (String link : links) {
+                mTextView.append(link + "\n\n");
+            }
+            totals();
         }
     }
 

@@ -17,8 +17,7 @@ android:layout_height="match_parent">
         android:layout_marginBottom="67dp"
         android:maxLines="1000"
         android:padding="10sp"
-        android:scrollbars="vertical"
-        />
+        android:scrollbars="vertical" />
 
     <Button
         android:id="@+id/button2"
