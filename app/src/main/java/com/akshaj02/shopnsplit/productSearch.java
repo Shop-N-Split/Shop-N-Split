@@ -1,5 +1,7 @@
 package com.akshaj02.shopnsplit;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -12,6 +14,9 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
+
 import android.annotation.SuppressLint;
 
 import android.app.Activity;
@@ -43,12 +48,12 @@ import org.jsoup.nodes.Document;
 
 public class productSearch extends Activity {
 
-    Button mEPButton;
-    TextView mTextView;
-    ProgressBar mProgressBar;
+//    Button mEPButton;
+//    TextView mTextView;
+    ProgressBar mProgressbar;
     Context context;
 
-    private static final String TAG = "searchApp";
+    //private static final String TAG = "searchApp";
     static String result = null;
     Integer responseCode = null;
     String responseMessage = "";
@@ -71,8 +76,8 @@ public class productSearch extends Activity {
         context = getApplicationContext();
 
         // GUI init
-        mTextView = findViewById(R.id.textView1);
-        mEPButton = findViewById(R.id.button2);
+//        mTextView = findViewById(R.id.textView1);
+//        mEPButton = findViewById(R.id.button2);
 
 
         if (savedInstanceState == null) {
@@ -97,22 +102,44 @@ public class productSearch extends Activity {
 //            runSearch(product);
 //        }
 
+        //Intent intent = new Intent(productSearch.this, ExplorePrices.class);
+//                intent.putExtra("wTitles", /*walmartTitles*/ "Pro1#pro2#pro3#pro4#pro5");
+//                intent.putExtra("tTitles", /*targetTitles*/ "Pro1#pro2#pro3#pro4#pro5");
+//                intent.putExtra("wPrices", /*walmartPrices*/ "1.99#2.99#3.99#4.99#5.99");
+//                intent.putExtra("tPrices", /*targetPrices*/ "2.99#3.99#4.99#5.99#6.99");
+//                intent.putExtra("WalmartTotal", /*walmartPriceString*/ "10.99");
+//                intent.putExtra("TargetTotal", /*targetPriceString*/ "11.99");
+//                startActivity(intent);
 
 
-        mEPButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                //TODO: uncomment the variables for final version. read above TODO first.
-                Intent intent = new Intent(productSearch.this, ExplorePrices.class);
-                intent.putExtra("wTitles", /*walmartTitles*/ "Pro1#pro2#pro3#pro4#pro5");
-                intent.putExtra("tTitles", /*targetTitles*/ "Pro1#pro2#pro3#pro4#pro5");
-                intent.putExtra("wPrices", /*walmartPrices*/ "1.99#2.99#3.99#4.99#5.99");
-                intent.putExtra("tPrices", /*targetPrices*/ "2.99#3.99#4.99#5.99#6.99");
-                intent.putExtra("WalmartTotal", /*walmartPriceString*/ "10.99");
-                intent.putExtra("TargetTotal", /*targetPriceString*/ "11.99");
-                startActivity(intent);
+        prog();
+    }
+
+    public void prog(){
+        mProgressbar = findViewById(R.id.progressBar);
+        final Timer timer = new Timer();
+        TimerTask timerTask = new TimerTask() {
+            @Override
+            public void run() {
+                counter++;
+                mProgressbar.setProgress(counter);
+                if(counter == 100){
+                    timer.cancel();
+                    Intent intent = new Intent(productSearch.this, ExplorePrices.class);
+                    //TODO: Fix prices not showing up
+                    intent.putExtra("wTitles",/* walmartTitles*/ "Pro1#pro2#pro3#pro4#pro5");
+                    intent.putExtra("tTitles", /*targetTitles*/ "Pro1#pro2#pro3#pro4#pro5");
+                    intent.putExtra("wPrices", /*walmartPrices*/"1.99#2.99#3.99#4.99#5.99");
+                    intent.putExtra("tPrices", /*targetPrices*/"2.99#3.99#4.99#5.99#6.99");
+                    intent.putExtra("WalmartTotal", /*walmartPriceString*/"10.99");
+                    intent.putExtra("TargetTotal", /*targetPriceString*/"11.99");
+                    startActivity(intent);
+                    finish();
+                }
             }
-        });
+        };
 
+        timer.schedule(timerTask, 0, 150);
     }
 
     //Make a function to make the URL
@@ -143,16 +170,16 @@ public class productSearch extends Activity {
         return url;
     }
 
-    public void totals(){
-        counter++;
-        if (counter == 5) {
-            mTextView.append("Walmart Total: " + WTotal + "\n");
-            mTextView.append("Target Total: " + TTotal + "\n");
-            //convert it to a string
-            walmartPriceString = String.valueOf(WTotal);
-            targetPriceString = String.valueOf(TTotal);
-        }
-    }
+//    public void totals(){
+//        counter++;
+//        if (counter == 5) {
+//            mTextView.append("Walmart Total: " + WTotal + "\n");
+//            mTextView.append("Target Total: " + TTotal + "\n");
+//            //convert it to a string
+//            walmartPriceString = String.valueOf(WTotal);
+//            targetPriceString = String.valueOf(TTotal);
+//        }
+//    }
 
     private class GoogleSearchAsyncTask extends AsyncTask<URL, Integer, String> {
 
@@ -346,16 +373,16 @@ public class productSearch extends Activity {
             //mProgressBar.setVisibility(View.GONE);
 
             // make TextView scrollable
-            mTextView.setMovementMethod(new ScrollingMovementMethod());
+            //mTextView.setMovementMethod(new ScrollingMovementMethod());
             //display the links
 //            mTextView.setText(result);
 
             //display the links one after the other
-            String[] links = result.split("\n\n");
-            for (String link : links) {
-                mTextView.append(link + "\n\n");
-            }
-            totals();
+//            String[] links = result.split("\n\n");
+//            for (String link : links) {
+//                mTextView.append(link + "\n\n");
+//            }
+//            totals();
         }
     }
 
