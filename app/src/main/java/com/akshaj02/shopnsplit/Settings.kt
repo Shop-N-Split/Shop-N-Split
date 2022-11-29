@@ -28,6 +28,13 @@ class Settings : AppCompatActivity() {
 
         }
 
+        val display_contacts = findViewById<Button>(R.id.contacts_butt)
+        display_contacts.setOnClickListener {
+            var intent: Intent = Intent(this, contact_main::class.java)
+            startActivity(intent)
+            finish()
+
+        }
 
         // }
 

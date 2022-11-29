@@ -170,13 +170,14 @@
                         android:padding="12dp"
                         android:src="@drawable/about_us_icon" />
 
-                    <TextView
+                    <Button
+                        android:id="@+id/contacts_butt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/aboutUsIcon"
-                        android:text="About Us"
+                        android:text="Display Contacts"
                         android:textColor="#FFFFFF"
                         android:textStyle="bold" />
 
