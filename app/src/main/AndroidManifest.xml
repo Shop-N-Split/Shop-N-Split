@@ -100,14 +100,7 @@
                 android:value="" />
         </activity>
 
-        <activity
-            android:name=".myProductSearcher"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-<!--        <activity android:name=".Contact"-->
+        <!--        <activity android:name=".Contact"-->
 <!--            android:exported="false">-->
 <!--            <meta-data-->
 <!--                android:name="android.app.lib_name"-->
@@ -132,6 +125,20 @@
 <!--                android:value="" />-->
 <!--        </activity>-->
         <activity android:name=".homepage"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity android:name=".Split"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity android:name=".AddExpense"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

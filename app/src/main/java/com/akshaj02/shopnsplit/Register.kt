@@ -79,9 +79,6 @@ class Register : AppCompatActivity() {
                                         Toast.LENGTH_SHORT
                                     ).show()
 
-                                    // TODO (STEP 4: Redirect the user to the Main Screen.)
-                                    // START
-                                    // Finish the Register Screen
                                     val intent = Intent(this@Register, MainActivity::class.java)
                                     intent.flags =
                                         Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK

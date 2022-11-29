@@ -19,7 +19,7 @@ class homepage: AppCompatActivity() {
 
         val split = findViewById<Button>(R.id.split)
         split.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, Split::class.java)
             startActivity(intent)
         }
 
@@ -37,7 +37,7 @@ class homepage: AppCompatActivity() {
 
         val split2 = findViewById<ImageView>(R.id.icon3)
         split2.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, Split::class.java)
             startActivity(intent)
         }
 
@@ -51,5 +51,6 @@ class homepage: AppCompatActivity() {
     override fun onBackPressed() {
 
     }
+
 
 }
