@@ -15,6 +15,12 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 
 
 class MainActivity : AppCompatActivity() {
+
+    //onPressedBack variable to check if back button is pressed
+    private var onPressedBack = false
+    //FirebaseAuth instance
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -31,7 +37,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-
         val googleSignin = findViewById<com.google.android.gms.common.SignInButton>(R.id.googleSignInButton)
         googleSignin.setOnClickListener {
             val auth = FirebaseAuth.getInstance()
@@ -39,8 +44,21 @@ class MainActivity : AppCompatActivity() {
             val signInIntent = GoogleSignInClient.signInIntent
             startActivityForResult(signInIntent, 1)
 
+//            if (auth.currentUser != null) {
+////                val intent = Intent(this, homepage::class.java)
+////                startActivity(intent)
+//            }
+//            else {
+//                Toast.makeText(
+//                    this@MainActivity,
+//                    "Please sign in.",
+//                    Toast.LENGTH_SHORT
+//                ).show()
+//            }
+
+            //if the user is already signed in, then go to homepage
             if (auth.currentUser != null) {
-                val intent = Intent(this, ChecklistPage::class.java)
+                val intent = Intent(this, homepage::class.java)
                 startActivity(intent)
             }
             else {
@@ -50,6 +68,10 @@ class MainActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
             }
+
+            //if google sign in is successful, then go to homepage
+
+
         }
 
         //once google sign in is done, go to home page
@@ -61,9 +83,9 @@ class MainActivity : AppCompatActivity() {
         loginButton.setOnClickListener {
             if (FirebaseAuth.getInstance().currentUser != null) {
                 // User is signed in (getCurrentUser() will be null if not signed in)
-                val intent = Intent(this, ChecklistPage::class.java)
-                startActivity(intent)
-                finish()
+//                val intent = Intent(this, MainActivity::class.java)
+//                startActivity(intent)
+//                finish()
             }
             when {
                 TextUtils.isEmpty(emailAddress.text.toString().trim { it <= ' ' }) -> {
@@ -109,7 +131,7 @@ class MainActivity : AppCompatActivity() {
                                     Toast.LENGTH_SHORT
                                 ).show()
 
-                                val intent = Intent(this, ChecklistPage::class.java)
+                                val intent = Intent(this, homepage::class.java)
                                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                                 intent.putExtra("user_id", firebaseUser.uid)
                                 intent.putExtra("email_id", email)
@@ -130,4 +152,10 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
+
+//onBackPressed function to check if back button is pressed
+    override fun onBackPressed() {
+
+    }
+
 }
