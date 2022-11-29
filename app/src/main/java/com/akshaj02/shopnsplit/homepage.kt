@@ -43,7 +43,7 @@ class homepage: AppCompatActivity() {
 
         val settings = findViewById<ImageView>(R.id.icon4)
         settings.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, Premium::class.java)
             startActivity(intent)
         }
     }
