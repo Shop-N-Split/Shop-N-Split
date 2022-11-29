@@ -19,7 +19,7 @@ class homepage: AppCompatActivity() {
 
         val split = findViewById<Button>(R.id.split)
         split.setOnClickListener {
-            val intent = Intent(this, Split::class.java)
+            val intent = Intent(this, contact_main::class.java)
             startActivity(intent)
         }
 
@@ -43,7 +43,7 @@ class homepage: AppCompatActivity() {
 
         val settings = findViewById<ImageView>(R.id.icon4)
         settings.setOnClickListener {
-            val intent = Intent(this, Premium::class.java)
+            val intent = Intent(this, Settings::class.java)
             startActivity(intent)
         }
     }
