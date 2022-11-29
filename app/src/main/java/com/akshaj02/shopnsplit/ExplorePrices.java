@@ -5,7 +5,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -24,6 +27,9 @@ public class ExplorePrices extends AppCompatActivity {
     private String WalmartTotal = "";
     private String TargetTotal = "";
 
+    Button mHomepage;
+    Button mSplit;
+
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -34,6 +40,26 @@ public class ExplorePrices extends AppCompatActivity {
         recyclerView = findViewById(R.id.main_recyclervie);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        mHomepage = findViewById(R.id.homepage);
+
+        mHomepage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ExplorePrices.this, homepage.class);
+                startActivity(intent);
+            }
+        });
+
+        mSplit = findViewById(R.id.split_button);
+
+        mSplit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ExplorePrices.this, Split.class);
+                startActivity(intent);
+            }
+        });
 
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
