@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/primary_blue"
+    android:background="@color/blue"
     android:orientation="vertical"
     tools:context=".Settings">
 
@@ -90,7 +90,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="405dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
@@ -131,8 +131,7 @@
 
                 <!-- About Us -->
 
-                <!-- FAQs -->
-                <RelativeLayout
+  <!--              <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp">
@@ -165,7 +164,48 @@
                         android:textColor="@color/white"
                         android:fontFamily="@font/quicksand_semibold"/>
                 </RelativeLayout>
+-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="74dp">
 
+                <ImageView
+                    android:id="@+id/faqIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="13dp"
+                    android:background="@drawable/round_back_security"
+                    android:padding="12dp"
+                    android:src="@drawable/logout_icon" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/right_arrow_icon" />
+
+                <Button
+                    android:textAllCaps="false"
+                    android:id="@+id/pass_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="26dp"
+                    android:layout_marginBottom="8dp"
+
+                    android:layout_toEndOf="@+id/faqIcon"
+                    app:backgroundTint="#333c4d"
+                    android:stateListAnimator="@null"
+                    android:textSize="14dp"
+                    android:text="Update Password"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/quicksand_bold"/>
+
+            </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -182,6 +222,7 @@
 
                     <Button
                         android:id="@+id/contacts_butt"
+                        android:textAllCaps="false"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
@@ -189,9 +230,12 @@
                         android:layout_marginEnd="26dp"
                         android:layout_marginBottom="8dp"
                         android:layout_toEndOf="@+id/aboutUsIcon"
+                        app:backgroundTint="#333c4d"
+                        android:stateListAnimator="@null"
+                        android:textSize="14dp"
                         android:text="Display Contacts"
                         android:textColor="@color/white"
-                        android:fontFamily="@font/quicksand_semibold" />
+                        android:fontFamily="@font/quicksand_bold" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -225,6 +269,7 @@
 
                     <Button
                         android:id="@+id/logout_butt"
+                        android:textAllCaps="false"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
@@ -233,9 +278,12 @@
                         android:layout_marginEnd="26dp"
                         android:layout_marginBottom="8dp"
                         android:layout_toEndOf="@+id/logOutIcon"
+                        app:backgroundTint="#333c4d"
+                        android:stateListAnimator="@null"
+                        android:textSize="14dp"
                         android:text="Logout"
                         android:textColor="@color/white"
-                        android:fontFamily="@font/quicksand_semibold"/>
+                        android:fontFamily="@font/quicksand_bold"/>
 
                 </RelativeLayout>
                 <RelativeLayout
@@ -261,6 +309,7 @@
 
                     <Button
                         android:id="@+id/premium"
+                        android:textAllCaps="false"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
@@ -269,9 +318,52 @@
                         android:layout_marginEnd="26dp"
                         android:layout_marginBottom="8dp"
                         android:layout_toEndOf="@+id/premiumicon"
+                        app:backgroundTint="#333c4d"
+                        android:stateListAnimator="@null"
+                        android:textSize="14dp"
                         android:text="Premium"
                         android:textColor="@color/white"
-                        android:fontFamily="@font/quicksand_semibold"/>
+                        android:fontFamily="@font/quicksand_bold"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp">
+
+                    <ImageView
+                        android:id="@+id/Toc"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="13dp"
+                        android:background="@drawable/round_back_security"
+                        android:padding="12dp"
+                        android:src="@drawable/logout_icon" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/right_arrow_icon" />
+
+                    <Button
+                        android:id="@+id/tocbut"
+                        android:textAllCaps="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="26dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_toEndOf="@+id/Toc"
+                        app:backgroundTint="#333c4d"
+                        android:stateListAnimator="@null"
+                        android:textSize="14dp"
+                        android:text="Terms and conditions"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/quicksand_bold"/>
 
                 </RelativeLayout>
 
