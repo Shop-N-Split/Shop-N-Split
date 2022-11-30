@@ -24,4 +24,10 @@
         android:id="@+id/txt_selected_contacts"
         />
 
+    <Button
+        android:id="@+id/split"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to splitting" />
+
 </LinearLayout>
