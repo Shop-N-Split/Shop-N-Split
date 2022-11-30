@@ -36,6 +36,14 @@ class Settings : AppCompatActivity() {
 
         }
 
+        val premium = findViewById<Button>(R.id.premium)
+        premium.setOnClickListener {
+            var intent: Intent = Intent(this, Premium::class.java)
+            startActivity(intent)
+            finish()
+
+        }
+
         // }
 
     }
