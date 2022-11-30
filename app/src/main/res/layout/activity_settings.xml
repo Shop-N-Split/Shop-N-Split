@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/primary_blue"
     android:orientation="vertical"
     tools:context=".Settings">
 
@@ -15,6 +16,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:padding="14dp"
+            app:tint="@color/white"
             android:src="@drawable/back_btn" />
 
         <TextView
@@ -22,9 +24,9 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Settings"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
             android:textSize="29sp"
-            android:textStyle="bold" />
+            android:fontFamily="@font/quicksand_semibold" />
     </RelativeLayout>
 
     <ScrollView
@@ -69,17 +71,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_marginStart="20dp"
+                        android:layout_marginStart="25dp"
                         android:layout_toEndOf="@+id/privateAccountIcon"
                         android:text="Enable Notifications"
-                        android:textColor="#FFFFFF"
-                        android:textStyle="bold" />
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/quicksand_semibold"
+                        />
 
                     <androidx.appcompat.widget.SwitchCompat
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
+                        android:color="@color/white"
                         android:switchMinWidth="50dp" />
                 </RelativeLayout>
             </LinearLayout>
@@ -110,11 +114,12 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="32dp"
-                        android:layout_marginStart="13dp"
+                        android:layout_marginStart="25dp"
                         android:layout_toEndOf="@+id/messageIcon"
                         android:text="Change username"
-                        android:textColor="#FFFFFF"
-                        android:textStyle="bold" />
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/quicksand_semibold"
+                        />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -149,11 +154,16 @@
 
                     <Button
                         android:id="@+id/pass_update"
-                        android:layout_width="252dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="26dp"
+                        android:layout_marginBottom="8dp"
                         android:text="Update Password"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/quicksand_semibold"/>
                 </RelativeLayout>
 
 
@@ -174,12 +184,14 @@
                         android:id="@+id/contacts_butt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginStart="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="26dp"
+                        android:layout_marginBottom="8dp"
                         android:layout_toEndOf="@+id/aboutUsIcon"
                         android:text="Display Contacts"
-                        android:textColor="#FFFFFF"
-                        android:textStyle="bold" />
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/quicksand_semibold" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -213,16 +225,53 @@
 
                     <Button
                         android:id="@+id/logout_butt"
-                        android:layout_width="309dp"
-                        android:layout_height="49dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginStart="24dp"
                         android:layout_marginEnd="26dp"
                         android:layout_marginBottom="8dp"
                         android:layout_toEndOf="@+id/logOutIcon"
-                        android:insetLeft="34dp"
-                        android:text="Logout" />
+                        android:text="Logout"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/quicksand_semibold"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp">
+
+                    <ImageView
+                        android:id="@+id/premiumicon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="13dp"
+                        android:background="@drawable/round_back_security"
+                        android:padding="12dp"
+                        android:src="@drawable/logout_icon" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/right_arrow_icon" />
+
+                    <Button
+                        android:id="@+id/premium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="26dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_toEndOf="@+id/premiumicon"
+                        android:text="Premium"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/quicksand_semibold"/>
 
                 </RelativeLayout>
 

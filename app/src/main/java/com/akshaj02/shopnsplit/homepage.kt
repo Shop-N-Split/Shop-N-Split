@@ -19,7 +19,7 @@ class homepage: AppCompatActivity() {
 
         val split = findViewById<Button>(R.id.split)
         split.setOnClickListener {
-            val intent = Intent(this, contact_main::class.java)
+            val intent = Intent(this, Split::class.java)
             startActivity(intent)
         }
 

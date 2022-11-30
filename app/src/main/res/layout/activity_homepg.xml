@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#A5C1FF"
     tools:context=".MainActivity">
 
     <Button
@@ -17,12 +17,15 @@
 
         android:text="Shop"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/white"
+        android:textColor="@color/Secondary_green"
         android:textSize="30dp"
+
         app:layout_constraintBottom_toTopOf="@+id/split"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Top_Layout" />
+        app:layout_constraintTop_toBottomOf="@+id/Top_Layout"
+        android:elevation="20dp"
+        />
 
     <Button
         android:id="@+id/split"
@@ -35,8 +38,9 @@
         android:text="Split"
         android:layout_marginBottom="80dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/white"
+        android:textColor="@color/Secondary_green"
         android:textSize="30dp"
+        android:elevation="20dp"
         app:layout_constraintBottom_toTopOf="@+id/Bottom_Layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -47,57 +51,67 @@
         android:layout_height="wrap_content"
         android:background="@drawable/shape_login_panel"
         android:orientation="horizontal"
+        android:layout_marginBottom="15dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        android:elevation="20dp"
+        >
 
         <ImageView
             android:id="@+id/icon1"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             app:tint="@color/Secondary_green"
             app:srcCompat="@drawable/home"
+            android:elevation="10dp"
 
             />
 
         <ImageView
             android:id="@+id/icon2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-
+            android:elevation="10dp"
             android:layout_toEndOf="@+id/icon1"
             app:tint="@color/Secondary_green"
             app:srcCompat="@drawable/notes" />
         <ImageView
             android:id="@+id/icon3"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             app:tint="@color/Secondary_green"
             android:layout_toEndOf="@+id/icon2"
-            app:srcCompat="@drawable/bill" />
+            app:srcCompat="@drawable/bill"
+            android:elevation="10dp"
+            />
         <ImageView
             android:id="@+id/icon4"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             app:tint="@color/Secondary_green"
             android:layout_toEndOf="@+id/icon3"
-            app:srcCompat="@drawable/settings" />
+            app:srcCompat="@drawable/settings"
+            android:elevation="10dp"
+            />
 
 
     </RelativeLayout>
@@ -110,10 +124,13 @@
         android:paddingLeft="50dp"
         android:paddingRight="50dp"
         android:background="@drawable/shape_login_panel"
+        android:backgroundTint="@null"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="20dp"
+        >
 
         <ImageView
             android:id="@+id/icon5"
