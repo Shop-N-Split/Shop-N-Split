@@ -9,16 +9,18 @@
     <RelativeLayout
         android:layout_width="370dp"
         android:layout_height="230dp"
-
-        android:background="@drawable/main_button"
+        android:id="@+id/relativeLayout"
+        android:background="@drawable/main_button2"
         android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.337">
+        app:layout_constraintVertical_bias="0.255">
 
         <EditText
+            android:id="@+id/cardNumber"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -30,6 +32,7 @@
             android:textColorHint="@color/white" />
 
         <EditText
+            android:id="@+id/Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -54,12 +57,12 @@
             android:textColorHint="@color/white" />
 
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="50dp"
-            android:layout_height="23dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            app:srcCompat="@drawable/mastercard" />
+            android:id="@+id/cardType"
+            android:layout_width="111dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="260dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="0dp" />
 
     </RelativeLayout>
 

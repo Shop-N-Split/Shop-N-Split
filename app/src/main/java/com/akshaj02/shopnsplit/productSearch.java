@@ -100,6 +100,7 @@ public class productSearch extends Activity {
 //        for (int i = 0; i < products.length; i++) {
 //            product = products[i];
 //            runSearch(product);
+//            //counter++;
 //        }
 
         //Intent intent = new Intent(productSearch.this, ExplorePrices.class);
