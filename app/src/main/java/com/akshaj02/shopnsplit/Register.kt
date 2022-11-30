@@ -28,33 +28,21 @@ class Register : AppCompatActivity() {
         registerButton.setOnClickListener {
             when {
                 TextUtils.isEmpty(username.text.toString().trim { it <= ' ' }) -> {
-                    Toast.makeText(
-                        this@Register,
-                        "Please enter username.",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    username.error = "Please enter a username."
                 }
                 TextUtils.isEmpty(emailAddress.text.toString().trim { it <= ' ' }) -> {
-                    Toast.makeText(
-                        this@Register,
-                        "Please enter email.",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    emailAddress.error = "Please enter an email address."
+                }
+
+                !emailAddress.text.toString().contains("@") -> {
+                    emailAddress.error = "Please enter valid email."
                 }
 
                 TextUtils.isEmpty(userPassword.text.toString().trim { it <= ' ' }) -> {
-                    Toast.makeText(
-                        this@Register,
-                        "Please enter password.",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    userPassword.error = "Please enter a password."
                 }
                 TextUtils.isEmpty(confirmPass.text.toString().trim { it <= ' ' }) -> {
-                    Toast.makeText(
-                        this@Register,
-                        "Please confirm password.",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    confirmPass.error = "Please re-enter your password."
                 }
 
                 else -> {

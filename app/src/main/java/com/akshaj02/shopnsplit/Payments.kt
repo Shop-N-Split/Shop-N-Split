@@ -26,12 +26,39 @@ class Payments : AppCompatActivity() {
         //when something is typed in the card number field, check if it is valid
         cardNumber.setOnFocusChangeListener { _, hasFocus ->
             if (!hasFocus) {
-                val firstDigit = cardNumber.text.toString().substring(0,1)
 
+                //if the number of digits is 16, separate it with a space every 4 digits
+                if (cardNumber.text.toString().length == 16) {
+                    val cardNumberString = cardNumber.text.toString()
+                    val cardNumberString1 = cardNumberString.substring(0, 4)
+                    val cardNumberString2 = cardNumberString.substring(4, 8)
+                    val cardNumberString3 = cardNumberString.substring(8, 12)
+                    val cardNumberString4 = cardNumberString.substring(12, 16)
+                    cardNumber.setText("$cardNumberString1 $cardNumberString2 $cardNumberString3 $cardNumberString4")
+                }
+
+                //if the number of digits is 15, separate it with a space every 4, 5 and 5 digits
+                if (cardNumber.text.toString().length == 15) {
+                    val cardNumberString = cardNumber.text.toString()
+                    val cardNumberString1 = cardNumberString.substring(0, 4)
+                    val cardNumberString2 = cardNumberString.substring(4, 10)
+                    val cardNumberString3 = cardNumberString.substring(10, 15)
+                    cardNumber.setText("$cardNumberString1 $cardNumberString2 $cardNumberString3")
+                }
+
+                //if number of digits is not 15 or 16, show an error message
+                if (cardNumber.text.toString().length != 15 || cardNumber.text.toString().length != 16) {
+                    cardNumber.error = "Invalid card number"
+                }
+
+
+
+
+                val firstDigit = cardNumber.text.toString().substring(0,1)
                 //if the first digit is 4, then it is a visa card
-                if (firstDigit == "4"){
+                if (firstDigit == "4") {
                     //change drawable from mastercard to visa
-                    relativeLayout.setBackgroundResource(R.drawable.visabox)
+                    //relativeLayout.setBackgroundResource(R.drawable.visabox)
                     cardType.setImageResource(R.drawable.visa)
                 }
                 if (firstDigit == "5"){

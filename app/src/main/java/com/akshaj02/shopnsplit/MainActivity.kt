@@ -89,23 +89,19 @@ class MainActivity : AppCompatActivity() {
             }
             when {
                 TextUtils.isEmpty(emailAddress.text.toString().trim { it <= ' ' }) -> {
-                    Toast.makeText(
-                        this@MainActivity,
-                        "Please enter email.",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    //error message if email is empty
+                    emailAddress.error = "Please enter email."
                 }
 
                 TextUtils.isEmpty(userPassword.text.toString().trim { it <= ' ' }) -> {
-                    Toast.makeText(
-                        this@MainActivity,
-                        "Please enter password.",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    userPassword.error = "Please enter password."
                 }
                 //login the user with last registered email and password
 
-
+                //if the email does not contain @, then show error message
+                !emailAddress.text.toString().contains("@") -> {
+                    emailAddress.error = "Please enter valid email."
+                }
 
 
                 else -> {

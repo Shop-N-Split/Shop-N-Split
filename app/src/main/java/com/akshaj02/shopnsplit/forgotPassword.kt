@@ -19,11 +19,7 @@ class forgotPassword : AppCompatActivity() {
             val emailAddress = findViewById<TextView>(R.id.emailAddress)
             val email: String = emailAddress.text.toString().trim { it <= ' ' }
             if (email.isEmpty()) {
-                Toast.makeText(
-                    this@forgotPassword,
-                    "Please enter email.",
-                    Toast.LENGTH_SHORT
-                ).show()
+                emailAddress.error = "Please enter an email address."
             } else {
                 FirebaseAuth.getInstance().sendPasswordResetEmail(email)
                     .addOnCompleteListener { task ->
