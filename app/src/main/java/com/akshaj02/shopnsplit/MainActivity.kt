@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val googleSignin = findViewById<com.google.android.gms.common.SignInButton>(R.id.googleSignInButton)
+        val googleSignin = findViewById<com.google.android.material.button.MaterialButton>(R.id.googleSignInButton)
         googleSignin.setOnClickListener {
             val auth = FirebaseAuth.getInstance()
             val GoogleSignInClient = GoogleSignIn.getClient(this, GoogleSignInOptions.DEFAULT_SIGN_IN)
