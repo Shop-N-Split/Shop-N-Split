@@ -14,6 +14,9 @@ public class contact_main extends AppCompatActivity {
     TextView contactsDisplay;
     Button pickContacts;
     final int CONTACT_PICK_REQUEST = 1000;
+    Button backSplit;
+
+    //ArrayList<String> contacts = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,14 @@ public class contact_main extends AppCompatActivity {
             Intent intentContactPick = new Intent(contact_main.this,ContactsPickerActivity.class);
             contact_main.this.startActivityForResult(intentContactPick,CONTACT_PICK_REQUEST);
         });
+
+        backSplit = (Button) findViewById(R.id.split);
+
+        backSplit.setOnClickListener(v -> {
+            Intent intent = new Intent(contact_main.this, AddExpense.class);
+            intent.putExtra("contacts", contactsDisplay.getText().toString());
+            startActivity(intent);
+        });
     }
 
     @Override
@@ -40,13 +51,15 @@ public class contact_main extends AppCompatActivity {
 
             ArrayList<Contact> selectedContacts = data.getParcelableArrayListExtra("SelectedContacts");
 
+
+
             StringBuilder display= new StringBuilder();
             for(int i=0;i<selectedContacts.size();i++){
-
-                display.append(i + 1).append(". ").append(selectedContacts.get(i).toString()).append("\n");
+                //contacts.add(selectedContacts.get(i).toString());
+                display.append(selectedContacts.get(i).toString()).append("\n");
 
             }
-            contactsDisplay.setText("Selected Contacts : \n\n"+display);
+            contactsDisplay.setText(display);
 
         }
 
