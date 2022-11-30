@@ -21,8 +21,6 @@ class Payments : AppCompatActivity() {
 
         val cardType = findViewById<ImageView>(R.id.cardType)
 
-        val relativeLayout = findViewById<RelativeLayout>(R.id.relativeLayout)
-
         //when something is typed in the card number field, check if it is valid
         cardNumber.setOnFocusChangeListener { _, hasFocus ->
             if (!hasFocus) {
