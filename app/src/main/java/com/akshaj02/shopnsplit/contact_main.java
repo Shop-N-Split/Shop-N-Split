@@ -56,7 +56,7 @@ public class contact_main extends AppCompatActivity {
             StringBuilder display= new StringBuilder();
             for(int i=0;i<selectedContacts.size();i++){
                 //contacts.add(selectedContacts.get(i).toString());
-                display.append(selectedContacts.get(i).toString()).append("\n");
+                display.append(selectedContacts.get(i).toString()).append(",");
 
             }
             contactsDisplay.setText(display);

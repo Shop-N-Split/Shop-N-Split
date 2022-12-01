@@ -7,11 +7,12 @@
     android:background="@color/blue">
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
-        android:layout_width="401dp"
-        android:layout_height="284dp"
+        android:id="@+id/cardFlipView"
+        android:layout_width="380dp"
+        android:layout_height="274dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         app:flipDuration="400"
         app:flipEnabled="true"
         app:flipFrom="front"
@@ -23,91 +24,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.255">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:src="@drawable/cardback" />
+        <!-- Back Layout Goes Here -->
+        <include layout="@layout/cardback"/>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="266dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:src="@drawable/cardfront" />
-
-        <!--        <EditText-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginStart="16dp"-->
-        <!--            android:layout_marginTop="16dp"-->
-        <!--            android:layout_marginEnd="16dp"-->
-        <!--            android:layout_marginBottom="16dp"-->
-        <!--            android:ems="10"-->
-        <!--            android:hint="Card Number"-->
-        <!--            android:inputType="textPersonName"-->
-        <!--            android:text="Card Number"-->
-        <!--            android:textColor="@color/black"-->
-        <!--            android:textSize="24sp"-->
-        <!--            android:autofillHints="" />-->
+        <!-- Front Layout Goes Here -->
+        <include layout="@layout/cardfront"/>
 
 
     </com.wajahatkarim3.easyflipview.EasyFlipView>
-
-    <EditText
-        android:id="@+id/cardNumber"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="551dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="Card Number"
-        android:inputType="textPersonName"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white" />
-
-    <EditText
-        android:id="@+id/Name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="530dp"
-        android:ems="10"
-        android:hint="Your Name"
-        android:inputType="textPersonName"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white" />
-
-    <EditText
-        android:id="@+id/editTextNumber"
-        android:layout_width="75dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="530dp"
-        android:layout_marginEnd="10dp"
-        android:hint="MM/YY"
-        android:inputType="number"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white" />
-
-    <ImageView
-        android:id="@+id/cardType"
-        android:layout_width="111dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="260dp"
-        android:layout_marginTop="545dp"
-        android:layout_marginEnd="0dp" />
 
     <Button
         android:id="@+id/payButton"

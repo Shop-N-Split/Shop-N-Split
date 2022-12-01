@@ -6,48 +6,50 @@
     android:background="@color/white"
     tools:context=".MainActivity">
 
+
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/splitview"-->
+<!--        android:layout_width="410dp"-->
+<!--        android:layout_height="251dp"-->
+
+
+<!--        tools:layout_editor_absoluteX="0dp"-->
+<!--        tools:layout_editor_absoluteY="476dp" />-->
+
     <RelativeLayout
         android:id="@+id/top_Layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:background="@drawable/shape_login_panel"
         android:orientation="horizontal"
+        android:padding="50dp"
+
         android:paddingLeft="50dp"
         android:paddingRight="50dp"
 
-        android:padding="50dp"
         app:elevation="10dp"
-
-        app:layout_constraintBottom_toTopOf="@+id/splitview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.077">
 
         <TextView
             android:id="@+id/text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/quicksand_bold"
-            android:text="You are owed $100.00"
+            android:text="Split"
             android:textColor="@color/Secondary_green"
             android:textSize="20sp" />
 
     </RelativeLayout>
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/splitview"
-        android:layout_width="410dp"
-        android:layout_height="592dp"
-
-
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="135dp" />
-
     <Button
         android:id="@+id/split"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="456dp"
         android:background="@drawable/main_button"
         android:fontFamily="@font/quicksand_bold"
         android:gravity="center"
@@ -58,13 +60,50 @@
         android:textColor="@color/white"
         android:textSize="20dp"
         app:backgroundTint="@null"
-        app:layout_constraintBottom_toBottomOf="@+id/splitview"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintBottom_toBottomOf="parent"
 
-        app:layout_constraintStart_toStartOf="@+id/splitview"
-        app:layout_constraintTop_toBottomOf="@+id/top_Layout"
-        app:layout_constraintVertical_bias="0.688" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.763" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="267dp"
+        android:layout_height="30dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.013"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.255" />
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="85dp"
+        android:layout_height="31dp"
+        android:layout_marginEnd="16dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.255" />
+
+    <TextView
+        android:id="@+id/people"
+        android:layout_width="267dp"
+        android:layout_height="80dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.013"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.31" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

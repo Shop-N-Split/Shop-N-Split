@@ -1,17 +1,13 @@
 package com.akshaj02.shopnsplit
 
 import android.os.Bundle
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.RelativeLayout
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
 class Payments : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_payments)
-
 
         val cardNumber = findViewById<EditText>(R.id.cardNumber)
         //call Lunh.java to check if the card number is valid
