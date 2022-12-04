@@ -1,5 +1,6 @@
 package com.akshaj02.shopnsplit
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
@@ -8,6 +9,8 @@ import android.text.TextUtils
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import android.content.Intent
+import android.text.method.PasswordTransformationMethod
+import android.widget.ImageView
 import android.widget.TextView
 //import google sign in package
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -21,9 +24,41 @@ class MainActivity : AppCompatActivity() {
     //FirebaseAuth instance
 
 
+    @SuppressLint("ResourceType", "CutPasteId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        //If eye icon is clicked, password is shown and eye icon is changed
+        val eyeIcon = findViewById<ImageView>(R.id.eye)
+        eyeIcon.setImageResource(R.drawable.invisible)
+        val password = findViewById<EditText>(R.id.password)
+//        eyeIcon.setOnClickListener {
+//            //if icon is invisible, password is shown and icon is changed to visible
+//            if (eyeIcon.tag == "invisible") {
+//                password.transformationMethod = null
+//                eyeIcon.setImageResource(R.drawable.visibility)
+//                eyeIcon.tag = "visible"
+//            }
+//            //if icon is visible, password is hidden and icon is changed to invisible
+//            else {
+//                password.transformationMethod = PasswordTransformationMethod()
+//                eyeIcon.setImageResource(R.drawable.invisible)
+//                eyeIcon.tag = "invisible"
+//            }
+//        }
+
+        //when the eye icon is clicked, toggle the password visibility
+       //toggle between visible and invisible when clicked
+        eyeIcon.setOnClickListener {
+            if (password.transformationMethod == null) {
+                password.transformationMethod = PasswordTransformationMethod()
+                eyeIcon.setImageResource(R.drawable.invisible)
+            } else {
+                password.transformationMethod = null
+                eyeIcon.setImageResource(R.drawable.visibility)
+            }
+        }
 
         val registerButton = findViewById<TextView>(R.id.register)
         registerButton.setOnClickListener {
@@ -36,6 +71,8 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, forgotPassword::class.java)
             startActivity(intent)
         }
+
+
 
         val googleSignin = findViewById<com.google.android.material.button.MaterialButton>(R.id.googleSignInButton)
         googleSignin.setOnClickListener {

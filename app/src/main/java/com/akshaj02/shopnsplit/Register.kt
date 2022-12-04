@@ -2,14 +2,13 @@ package com.akshaj02.shopnsplit
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.EditText
-import android.widget.Toast
 import android.text.TextUtils
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import android.content.Intent
-import android.widget.Button
-import android.widget.TextView
+import android.text.method.PasswordTransformationMethod
+import android.widget.*
+
 
 
 class Register : AppCompatActivity() {
@@ -21,6 +20,21 @@ class Register : AppCompatActivity() {
         val userPassword = findViewById<EditText>(R.id.password)
         val confirmPass = findViewById<EditText>(R.id.confirmPass)
         val username = findViewById<EditText>(R.id.username)
+        val eyeIcon = findViewById<ImageView>(R.id.eye)
+
+
+
+        eyeIcon.setOnClickListener {
+            if (userPassword.transformationMethod == null) {
+                userPassword.transformationMethod = PasswordTransformationMethod()
+                confirmPass.transformationMethod = PasswordTransformationMethod()
+                eyeIcon.setImageResource(R.drawable.invisible)
+            } else {
+                userPassword.transformationMethod = null
+                confirmPass.transformationMethod = null
+                eyeIcon.setImageResource(R.drawable.visibility)
+            }
+        }
 
 
 
