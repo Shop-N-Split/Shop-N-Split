@@ -52,7 +52,7 @@
         app:layout_constraintVertical_bias="0.517" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/expiryDate"
         android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
