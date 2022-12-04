@@ -98,6 +98,19 @@ public class ExplorePrices extends AppCompatActivity {
 
         TextView TotalPrice = findViewById(R.id.totalPrice);
 
+        //limit the amount of characters in wTitles and tTitles, add ... if too long
+        for (int i = 0; i < wTitles.length; i++) {
+            if (wTitles[i].length() > 20) {
+                wTitles[i] = wTitles[i].substring(0, 20) + "...";
+            }
+        }
+
+        for (int i = 0; i < tTitles.length; i++) {
+            if (tTitles[i].length() > 20) {
+                tTitles[i] = tTitles[i].substring(0, 20) + "...";
+            }
+        }
+
         //list1
         List<String> nestedList1 = new ArrayList<>();
         nestedList1.add(wTitles[0]);

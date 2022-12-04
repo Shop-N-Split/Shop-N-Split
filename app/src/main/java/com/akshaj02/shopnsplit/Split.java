@@ -36,11 +36,13 @@ public class Split extends AppCompatActivity {
         setContentView(R.layout.activity_split);
 
         //if the intent is null, then do this
-
+        Intent intent = getIntent();
+        String expense = intent.getStringExtra("expense");
+        String moneyOwed = intent.getStringExtra("money");
 
 
         //TODO: getting intent causes app to crash
-        //if the arraylist is empty, then do this
+        //if the arraylist
 
             initData();
             initRecyclerView();
@@ -69,13 +71,9 @@ public class Split extends AppCompatActivity {
     }
 
     private void initData() {
-
-//        Intent intent = getIntent();
-//        String expense = intent.getStringExtra("expense");
-//        String moneyOwed = intent.getStringExtra("money");
         mList = new ArrayList<>();
         //Hardcoded data, need to get data from AddExpense.java
-        mList.add(new SplitModel("expense", "Dec 15", "money", "$10.00"));
+        mList.add(new SplitModel("expense", "Dec 15","moneyOwed", "$10.00"));
 
     }
 }
