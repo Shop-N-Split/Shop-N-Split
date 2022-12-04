@@ -1,9 +1,12 @@
 package com.akshaj02.shopnsplit;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -30,8 +33,9 @@ public class contact_main extends AppCompatActivity {
         assert pickContacts != null;
         pickContacts.setOnClickListener(v -> {
 
-            Intent intentContactPick = new Intent(contact_main.this,ContactsPickerActivity.class);
-            contact_main.this.startActivityForResult(intentContactPick,CONTACT_PICK_REQUEST);
+                Intent intentContactPick = new Intent(contact_main.this, ContactsPickerActivity.class);
+                contact_main.this.startActivityForResult(intentContactPick, CONTACT_PICK_REQUEST);
+
         });
 
         backSplit = (Button) findViewById(R.id.split);
@@ -42,6 +46,28 @@ public class contact_main extends AppCompatActivity {
             startActivity(intent);
         });
     }
+
+    /*
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if(requestCode == 80){
+            if(grantResults[0] == PackageManager.PERMISSION_GRANTED){
+
+                Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
+
+            }
+            else
+            {
+                Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show();
+                //Permission Granted
+            }
+
+        }
+    } */
+
+
 
     @Override
     public void onActivityResult(int requestCode,int resultCode,Intent data){
