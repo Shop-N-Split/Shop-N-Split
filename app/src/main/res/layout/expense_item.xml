@@ -61,7 +61,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="8dp"
             android:fontFamily="@font/quicksand_regular"
-            android:text="You paid"
+            android:text="You lent"
             android:textSize="14dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/date"
@@ -72,7 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
-            android:layout_marginLeft="185dp"
+            android:layout_marginLeft="150dp"
 
             android:fontFamily="@font/quicksand_regular"
             android:text="0.00"
@@ -89,7 +89,7 @@
             android:layout_marginTop="35dp"
 
             android:fontFamily="@font/quicksand_regular"
-            android:text="You are Owed"
+            android:text="You Paid"
 
             android:textSize="14dp"
             app:layout_constraintBottom_toBottomOf="parent"

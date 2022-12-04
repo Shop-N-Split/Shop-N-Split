@@ -25,24 +25,36 @@ public class AddExpense extends AppCompatActivity {
 
         description = (EditText) findViewById(R.id.description);
         money = (EditText) findViewById(R.id.money);
+        String totalAmt = money.getText().toString();
         mAdd = (Button) findViewById(R.id.add);
+        addContact = findViewById(R.id.contact);
 
         // get intent from previous activity
         Intent intent = getIntent();
-
-        // get the string from the intent
         String contacts = intent.getStringExtra("contacts");
+        double count = 4.00;
+//        String contactList1 = contacts.replaceAll("\\|[^,]*\\,", " ");
+//        //remove | from the string
+//        String contactList2 = contactList1.replaceAll("\\|", "");
+//        //remove the space before comma
+//        String contactList3 = contactList2.replaceAll(" ,", ",");
+//        //remove the comma at the end
+//        String contactList4 = contactList3.replaceAll(",$", "");
 
+        //Convert money to double
+//        double moneyOwed = Double.parseDouble(totalAmt);
+//        double moneySplit = moneyOwed/count;
+//        double total = moneySplit * (count-1);
+//        String amountLent = Double.toString(total);
 
-        //split the string from new line
-        //String[] contactList = contacts.split("\\r?\\n");
+//        String garbage2 = Calculations.calculate(contacts, totalAmt);
+        String garbage = String.valueOf(count);
 
 
         text = (TextView) findViewById(R.id.text);
         text.setText(contacts);
         // set the string to the text view
 
-        addContact = findViewById(R.id.contact);
 
         addContact.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -59,7 +71,7 @@ public class AddExpense extends AppCompatActivity {
         mAdd.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 String desc = description.getText().toString();
-                String money1 = money.getText().toString();
+                String money1 = money.getText().toString() + garbage;
 
                 Intent intent = new Intent(AddExpense.this, Split.class);
                 intent.putExtra("description", desc);

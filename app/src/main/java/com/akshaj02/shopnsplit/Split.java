@@ -37,14 +37,29 @@ public class Split extends AppCompatActivity {
 
         //if the intent is null, then do this
         Intent intent = getIntent();
-        String expense = intent.getStringExtra("expense");
+        String expense = intent.getStringExtra("description");
         String moneyOwed = intent.getStringExtra("money");
-
-
+//        String contactList = intent.getStringExtra("contacts");
+//        int count = 4;
+//        int count = Integer.parseInt(contactList.split(",").length + "");
+//        //replace every character with " " if it is between | and ,
+//        String contactList1 = contactList.replaceAll("\\|[^,]*\\,", " ");
+//        //remove | from the string
+//        String contactList2 = contactList1.replaceAll("\\|", "");
+//        //remove the space before comma
+//        String contactList3 = contactList2.replaceAll(" ,", ",");
+//        //remove the comma at the end
+//        String contactList4 = contactList3.replaceAll(",$", "");
+        String amountLent = "10.45";
+        //Split the money owed by the number of contacts
+//        double money = Double.parseDouble(moneyOwed);
+//        double moneySplit = money/count;
+//        double total = moneySplit * (count-1);
+//        String amountLent = Double.toString(total);
         //TODO: getting intent causes app to crash
         //if the arraylist
 
-            initData();
+            initData(expense, moneyOwed, amountLent);
             initRecyclerView();
 
 
@@ -69,11 +84,10 @@ public class Split extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
     }
-
-    private void initData() {
+    private void initData(String expense, String moneyOwed, String amountLent) {
         mList = new ArrayList<>();
         //Hardcoded data, need to get data from AddExpense.java
-        mList.add(new SplitModel("expense", "Dec 15","moneyOwed", "$10.00"));
+        mList.add(new SplitModel(expense, "Dec 15", moneyOwed, amountLent));
 
     }
 }
