@@ -5,12 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,16 +16,16 @@ import java.util.List;
 
 public class Split extends AppCompatActivity {
 
-
-
-
     private RecyclerView recyclerView;
     private List<SplitModel> mList;
     private SplitAdapter adapter;
     LinearLayoutManager layoutManager;
+    private int counter = 0;
 
     Button mHomepage;
     Button mSplit;
+
+    String date;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -39,6 +37,12 @@ public class Split extends AppCompatActivity {
         Intent intent = getIntent();
         String expense = intent.getStringExtra("description");
         String moneyOwed = intent.getStringExtra("money");
+        date = intent.getStringExtra("date");
+
+
+        //convert moneyOwed to a double
+
+
 //        String contactList = intent.getStringExtra("contacts");
 //        int count = 4;
 //        int count = Integer.parseInt(contactList.split(",").length + "");
@@ -50,17 +54,15 @@ public class Split extends AppCompatActivity {
 //        String contactList3 = contactList2.replaceAll(" ,", ",");
 //        //remove the comma at the end
 //        String contactList4 = contactList3.replaceAll(",$", "");
-        String amountLent = "10.45";
+        String amountLent = "15.00";
         //Split the money owed by the number of contacts
 //        double money = Double.parseDouble(moneyOwed);
 //        double moneySplit = money/count;
 //        double total = moneySplit * (count-1);
 //        String amountLent = Double.toString(total);
-        //TODO: getting intent causes app to crash
-        //if the arraylist
 
-            initData(expense, moneyOwed, amountLent);
-            initRecyclerView();
+        initData(expense, date, moneyOwed, amountLent);
+        initRecyclerView();
 
 
         //mSplit action
@@ -68,6 +70,7 @@ public class Split extends AppCompatActivity {
         mSplit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                counter++;
                 Intent intent = new Intent(Split.this, AddExpense.class);
                 startActivity(intent);
             }
@@ -83,11 +86,11 @@ public class Split extends AppCompatActivity {
         adapter = new SplitAdapter(mList);
         recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
+
     }
-    private void initData(String expense, String moneyOwed, String amountLent) {
+    private void initData(String expense, String date, String moneyOwed, String amountLent) {
         mList = new ArrayList<>();
         //Hardcoded data, need to get data from AddExpense.java
-        mList.add(new SplitModel(expense, "Dec 15", moneyOwed, amountLent));
-
+        mList.add(new SplitModel(expense, date, "200", "250"));
     }
 }

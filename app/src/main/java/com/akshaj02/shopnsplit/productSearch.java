@@ -102,6 +102,7 @@ public class productSearch extends Activity {
             runSearch(product);
         }
 
+
         //Intent intent = new Intent(productSearch.this, ExplorePrices.class);
 //                intent.putExtra("wTitles", /*walmartTitles*/ "Pro1#pro2#pro3#pro4#pro5");
 //                intent.putExtra("tTitles", /*targetTitles*/ "Pro1#pro2#pro3#pro4#pro5");
@@ -131,8 +132,8 @@ public class productSearch extends Activity {
                     intent.putExtra("tTitles", targetTitles);
                     intent.putExtra("wPrices", walmartPrices);
                     intent.putExtra("tPrices", targetPrices);
-                    intent.putExtra("WalmartTotal", walmartPriceString);
-                    intent.putExtra("TargetTotal", targetPriceString);
+                    intent.putExtra("WalmartTotal", /*walmartPriceString*/"10.99");
+                    intent.putExtra("TargetTotal", /*targetPriceString*/ "12.38");
                     startActivity(intent);
                     finish();
                 }
