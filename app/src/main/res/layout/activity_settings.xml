@@ -407,7 +407,7 @@
                         android:text="Terms and conditions"
                         android:textAllCaps="false"
                         android:textColor="@color/blue_nu"
-                        android:textSize="18dp"
+                        android:textSize="16dp"
                         app:backgroundTint="#FAC55B" />
 
                 </RelativeLayout>
