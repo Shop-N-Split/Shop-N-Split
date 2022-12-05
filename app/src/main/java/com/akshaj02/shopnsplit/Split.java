@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -22,6 +21,7 @@ public class Split extends AppCompatActivity {
     private SplitAdapter adapter;
     LinearLayoutManager layoutManager;
     private int counter = 0;
+
     Button mHomepage;
     Button mSplit;
 
@@ -39,7 +39,27 @@ public class Split extends AppCompatActivity {
         String moneyOwed = intent.getStringExtra("money");
         date = intent.getStringExtra("date");
 
-        String amountLent = "75.00";
+
+        //convert moneyOwed to a double
+
+
+//        String contactList = intent.getStringExtra("contacts");
+//        int count = 4;
+//        int count = Integer.parseInt(contactList.split(",").length + "");
+//        //replace every character with " " if it is between | and ,
+//        String contactList1 = contactList.replaceAll("\\|[^,]*\\,", " ");
+//        //remove | from the string
+//        String contactList2 = contactList1.replaceAll("\\|", "");
+//        //remove the space before comma
+//        String contactList3 = contactList2.replaceAll(" ,", ",");
+//        //remove the comma at the end
+//        String contactList4 = contactList3.replaceAll(",$", "");
+        String amountLent = "15.00";
+        //Split the money owed by the number of contacts
+//        double money = Double.parseDouble(moneyOwed);
+//        double moneySplit = money/count;
+//        double total = moneySplit * (count-1);
+//        String amountLent = Double.toString(total);
 
         initData(expense, date, moneyOwed, amountLent);
         initRecyclerView();
@@ -68,9 +88,9 @@ public class Split extends AppCompatActivity {
         adapter.notifyDataSetChanged();
 
     }
-
-    private void initData(String expense, String date, String moneyOwed, String amountLent3) {
+    private void initData(String expense, String date, String moneyOwed, String amountLent) {
         mList = new ArrayList<>();
-        mList.add(new SplitModel(expense, date, moneyOwed, amountLent3));
+        //Hardcoded data, need to get data from AddExpense.java
+        mList.add(new SplitModel(expense, date, "200", "250"));
     }
 }

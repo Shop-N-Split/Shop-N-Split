@@ -51,7 +51,6 @@ public class AddExpense extends AppCompatActivity {
         description = findViewById(R.id.description);
         money = findViewById(R.id.money);
         String totalAmt = money.getText().toString();
-        Toast.makeText(this, totalAmt, Toast.LENGTH_SHORT).show();
         mAdd = findViewById(R.id.add);
         addContact = findViewById(R.id.contact);
 
