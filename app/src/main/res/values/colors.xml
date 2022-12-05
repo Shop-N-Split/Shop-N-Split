@@ -7,7 +7,6 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="warm_white">#F8EBDF</color>
-    <color name="white">#DCE6DD</color>
     <color name="colorPrimary">#FF6200EE</color>
     <color name="colorPrimaryDark">#FF3700B3</color>
     <color name="colorPrimaryLight">#FFBB86FC</color>
@@ -31,7 +30,12 @@
     <color name="primary_green">#93BBA5</color>
     <color name="lavender2">#d8e4ff</color>
 
-
+    <color name="white">#FFF8F3</color>
+    <color name="blue_nu">#575fcc</color>
+    <color name="blue_li">#739ef1</color>
+    <color name="orange">#ff6d3b</color>
+    <color name="green_nu">#8fd8b5</color>
+    <color name="mustard">#FABF48</color>
     <!--Theme Color range-->
     <color name="night_mode">#6124B1</color>
     <color name="notifications">#13B2C3</color>
