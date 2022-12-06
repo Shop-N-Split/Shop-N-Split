@@ -11,12 +11,11 @@
         android:id="@+id/recycerlview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
@@ -38,7 +37,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginBottom="20dp"
         android:text="My Shopping List"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,7 +45,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:textColor="@color/brwn"
         android:fontFamily="@font/quicksand_bold"
-        android:textSize="30sp"
+        android:textSize="40sp"
         />
 
     <Button

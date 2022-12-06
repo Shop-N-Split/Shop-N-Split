@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddNewTask"
-    android:background="@color/blue_li"
+    android:background="@color/green_nu"
     >
 
     <EditText
@@ -14,11 +14,11 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/blue_nu"
         android:fontFamily="@font/quicksand_semibold"
         android:textColor="@color/white"
-        android:textColorHint="@color/white"
+        android:textColorHint="@color/blue_nu"
         android:hint="Write Your Grocery Item ...."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
