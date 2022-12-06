@@ -40,9 +40,6 @@ public class ChecklistPage extends AppCompatActivity implements OnDialogCloseLis
     private Button mExplorePrices;
     private String prodString = "";
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

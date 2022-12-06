@@ -100,16 +100,6 @@ public class ExplorePrices extends AppCompatActivity {
             }
         }
 
-//        String[] wTitlesPrices = new String[wTitles.length + wPrices.length];
-//        System.arraycopy(wTitles, 0, wTitlesPrices, 0, wTitles.length);
-//        System.arraycopy(wPrices, 0, wTitlesPrices, wTitles.length, wPrices.length);
-//
-//        String[] tTitlesPrices = new String[tTitles.length + tPrices.length];
-//        System.arraycopy(tTitles, 0, tTitlesPrices, 0, tTitles.length);
-//        System.arraycopy(tPrices, 0, tTitlesPrices, tTitles.length, tPrices.length);
-
-
-
 //        Merge wTitles and wPrices to a new array
         String[] wTitlesPrices = new String[wTitles.length];
         for (int i = 0; i < wTitles.length; i++) {

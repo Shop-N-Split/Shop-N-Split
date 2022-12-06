@@ -56,5 +56,8 @@ dependencies {
     implementation 'com.wajahatkarim:EasyFlipView:3.0.3'
     implementation 'com.github.medyo:android-about-page:1.2.6'
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+    implementation 'com.google.firebase:firebase-analytics:17.2.1'
+    implementation 'com.google.firebase:firebase-database:19.2.0'
+
 
 }

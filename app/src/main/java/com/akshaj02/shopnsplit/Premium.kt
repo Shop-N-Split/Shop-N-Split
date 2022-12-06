@@ -15,9 +15,6 @@ class Premium : AppCompatActivity() {
             val intent = Intent(this, Payments::class.java)
             startActivity(intent)
         }
-
-
-
     }
 
 }

@@ -37,15 +37,9 @@ public class Split extends AppCompatActivity {
         String expense = intent.getStringExtra("description");
         String moneyOwed = intent.getStringExtra("money");
         date = intent.getStringExtra("date");
+        String expenseSplit = intent.getStringExtra("expenseSplit");
 
-//        String contactList = intent.getStringExtra("contacts");
-//        int count = 4;
-//        int count = Integer.parseInt(contactList.split(",").length + "");
-
-        String amountLent = "75.00";
-        counter++;
-
-        initData(expense, date, moneyOwed, amountLent);
+        initData(expense, date, moneyOwed, expenseSplit);
         initRecyclerView();
 
 
@@ -54,6 +48,7 @@ public class Split extends AppCompatActivity {
         mSplit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                counter++;
                 Intent intent = new Intent(Split.this, AddExpense.class);
                 startActivity(intent);
             }
@@ -74,8 +69,6 @@ public class Split extends AppCompatActivity {
 
     private void initData(String expense, String date, String moneyOwed, String amountLent) {
         mList = new ArrayList<>();
-        for (int i = 0; i < counter; i++) {
-            mList.add(new SplitModel(expense, date, moneyOwed, amountLent));
-        }
+        mList.add(new SplitModel(expense, date, moneyOwed, amountLent));
     }
 }

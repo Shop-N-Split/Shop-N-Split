@@ -102,29 +102,6 @@ public class AddNewTask  extends BottomSheetDialogFragment {
             }
         });
 
-//        setDueDate.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Calendar calendar = Calendar.getInstance();
-//
-//                int MONTH = calendar.get(Calendar.MONTH);
-//                int YEAR = calendar.get(Calendar.YEAR);
-//                int DAY = calendar.get(Calendar.DATE);
-//
-//                DatePickerDialog datePickerDialog = new DatePickerDialog(context, new DatePickerDialog.OnDateSetListener() {
-//                    @Override
-//                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-//                        month = month + 1;
-//                        setDueDate.setText(dayOfMonth + "/" + month + "/" + year);
-//                        dueDate = dayOfMonth + "/" + month +"/"+year;
-//
-//                    }
-//                } , YEAR , MONTH , DAY);
-//
-//                datePickerDialog.show();
-//            }
-//        });
-
         boolean finalIsUpdate = isUpdate;
         mSaveBtn.setOnClickListener(new View.OnClickListener() {
             @Override

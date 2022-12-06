@@ -47,27 +47,6 @@ public class contact_main extends AppCompatActivity {
         });
     }
 
-    /*
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-
-        if(requestCode == 80){
-            if(grantResults[0] == PackageManager.PERMISSION_GRANTED){
-
-                Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
-
-            }
-            else
-            {
-                Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show();
-                //Permission Granted
-            }
-
-        }
-    } */
-
-
 
     @Override
     public void onActivityResult(int requestCode,int resultCode,Intent data){

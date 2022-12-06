@@ -100,7 +100,7 @@
                 android:layout_height="wrap_content"
 
                 android:fontFamily="@font/quicksand_regular"
-                android:text="You Paid"
+                android:text="You Get"
 
                 android:textSize="14dp"
                 app:layout_constraintBottom_toBottomOf="parent"

@@ -33,23 +33,6 @@ class MainActivity : AppCompatActivity() {
         val eyeIcon = findViewById<ImageView>(R.id.eye)
         eyeIcon.setImageResource(R.drawable.invisible)
         val password = findViewById<EditText>(R.id.password)
-//        eyeIcon.setOnClickListener {
-//            //if icon is invisible, password is shown and icon is changed to visible
-//            if (eyeIcon.tag == "invisible") {
-//                password.transformationMethod = null
-//                eyeIcon.setImageResource(R.drawable.visibility)
-//                eyeIcon.tag = "visible"
-//            }
-//            //if icon is visible, password is hidden and icon is changed to invisible
-//            else {
-//                password.transformationMethod = PasswordTransformationMethod()
-//                eyeIcon.setImageResource(R.drawable.invisible)
-//                eyeIcon.tag = "invisible"
-//            }
-//        }
-
-        //when the eye icon is clicked, toggle the password visibility
-       //toggle between visible and invisible when clicked
         eyeIcon.setOnClickListener {
             if (password.transformationMethod == null) {
                 password.transformationMethod = PasswordTransformationMethod()
@@ -80,18 +63,6 @@ class MainActivity : AppCompatActivity() {
             val GoogleSignInClient = GoogleSignIn.getClient(this, GoogleSignInOptions.DEFAULT_SIGN_IN)
             val signInIntent = GoogleSignInClient.signInIntent
             startActivityForResult(signInIntent, 1)
-
-//            if (auth.currentUser != null) {
-////                val intent = Intent(this, homepage::class.java)
-////                startActivity(intent)
-//            }
-//            else {
-//                Toast.makeText(
-//                    this@MainActivity,
-//                    "Please sign in.",
-//                    Toast.LENGTH_SHORT
-//                ).show()
-//            }
 
             //if the user is already signed in, then go to homepage
             if (auth.currentUser != null) {

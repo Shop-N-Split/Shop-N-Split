@@ -1,5 +1,6 @@
 package com.akshaj02.shopnsplit;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,9 +9,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SplitAdapter extends RecyclerView.Adapter<SplitAdapter.ViewHolder> {
+
+    class myViewAdapter extends RecyclerView.ViewHolder {
+
+        public myViewAdapter(@NonNull View itemView) {
+            super(itemView);
+        }
+    }
 
     private List<SplitModel> mList;
 

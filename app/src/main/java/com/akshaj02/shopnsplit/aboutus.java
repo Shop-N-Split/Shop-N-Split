@@ -26,10 +26,7 @@ public class aboutus extends AppCompatActivity {
                 .addItem(new Element().setTitle("Version 1.0"))
                 .addGroup("CONNECT WITH US!")
                 .addEmail("yashvwaghmare@gmail.com")
-                //.addWebsite("Your website/")
-                //.addYoutube("UCbekhhidkzkGryM7mi5Ys_w")   //Enter your youtube link here (replace with my channel link)
-                //.addPlayStore("com.example.Shop'N'Split")   //Replace all this with your package name
-                //.addInstagram("akshajmurhekar ")    //Your instagram id
+
                 .addItem(createCopyright())
                 .create();
         setContentView(aboutPage);

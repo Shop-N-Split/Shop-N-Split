@@ -25,8 +25,6 @@ class homepage: AppCompatActivity() {
 
         val home = findViewById<ImageView>(R.id.icon1)
         home.setOnClickListener {
-//            val intent = Intent(this, homepage::class.java)
-//            startActivity(intent)
         }
 
         val shop2 = findViewById<ImageView>(R.id.icon2)
