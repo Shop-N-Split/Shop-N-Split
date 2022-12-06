@@ -300,7 +300,52 @@
                         android:letterSpacing="0"/>
 
                 </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp">
 
+                    <ImageView
+                        android:id="@+id/helpicon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginBottom="13dp"
+                        android:background="@drawable/round_back_security"
+                        android:backgroundTint="@color/mustard"
+                        android:padding="12dp"
+                        android:src="@drawable/help"
+                        app:tint="@color/blue_nu" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/right_arrow_icon"
+                        app:tint="@color/mustard" />
+
+                    <Button
+                        android:id="@+id/help"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="26dp"
+                        android:layout_marginBottom="13dp"
+                        android:layout_toEndOf="@+id/helpicon"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:stateListAnimator="@null"
+                        android:text="Help"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="18dp"
+                        app:backgroundTint="@color/blue_nu"
+                        android:letterSpacing="0"/>
+
+                </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="74dp">
