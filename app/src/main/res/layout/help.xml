@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/orange"
+    android:background="@color/dark_orange"
     tools:context=".MainActivity">
 
 
@@ -34,7 +34,7 @@
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toTopOf="@+id/linearLayout"
-        app:tint="@color/orange" />
+        app:tint="@color/dark_orange" />
 
     <TextView
         android:id="@+id/textView1"
@@ -45,7 +45,7 @@
         android:gravity="center"
         android:text="Akshaj Murehkar   +1 (682) 3268269"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="@color/orange"
+        android:textColor="@color/dark_orange"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
@@ -59,7 +59,7 @@
         android:gravity="center"
         android:text="Yash Waghmare   +1 (682) 5535706"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="@color/orange"
+        android:textColor="@color/dark_orange"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
@@ -73,7 +73,7 @@
         android:gravity="center"
         android:text="Talha Nayyar   +1 (682) 5838815"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="@color/orange"
+        android:textColor="@color/dark_orange"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
@@ -87,7 +87,7 @@
         android:gravity="center"
         android:text="Sameer Dayani   +1 (312) 5996152"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="@color/orange"
+        android:textColor="@color/dark_orange"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"

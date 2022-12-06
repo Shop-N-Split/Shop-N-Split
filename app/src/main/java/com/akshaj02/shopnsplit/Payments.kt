@@ -24,6 +24,7 @@ class Payments : AppCompatActivity() {
 
         val mPayButton = findViewById<Button>(R.id.payButton)
 
+        val mCvv = findViewById<Button>(R.id.cvvButton)
 
         //when the user is typing in expiry date, add a "/" after the first 2 digits
         expiryDate.addTextChangedListener(object : TextWatcher {
@@ -95,6 +96,17 @@ class Payments : AppCompatActivity() {
                 }
             }
         }
+
+        mCvv.setOnClickListener {
+            //flip the card to show the cvv
+            val flipView = findViewById<com.wajahatkarim3.easyflipview.EasyFlipView>(R.id.cardFlipView)
+            //flip the card
+            flipView.flipTheView()
+
+        }
+
+        //create a flipOnClick function to flip the card
+
 
         mPayButton.setOnClickListener() {
             //check is name is empty

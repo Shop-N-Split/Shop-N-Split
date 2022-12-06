@@ -70,6 +70,12 @@ class Settings : AppCompatActivity() {
 
         }
 
+        val helpBtn = findViewById<Button>(R.id.help)
+        helpBtn.setOnClickListener {
+            val intent: Intent = Intent(this, Help::class.java)
+            startActivity(intent)
+            finish()
+        }
 
 
 
@@ -97,6 +103,7 @@ class Settings : AppCompatActivity() {
 
             }
         }
+
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
