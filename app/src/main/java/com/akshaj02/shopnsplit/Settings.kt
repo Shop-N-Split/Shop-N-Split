@@ -5,8 +5,10 @@ import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 
 class Settings : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,12 +25,12 @@ class Settings : AppCompatActivity() {
         }
 
         val about_us = findViewById<Button>(R.id.tocbut)
-        about_us.setOnClickListener {
-            var intent: Intent = Intent(this, aboutus::class.java)
-            startActivity(intent)
-            finish()
-
-        }
+//        about_us.setOnClickListener {
+//            var intent: Intent = Intent(this, aboutus::class.java)
+//            startActivity(intent)
+//            finish()
+//
+//        }
 
         val terms_condition = findViewById<Button>(R.id.terms_butt)
         terms_condition.setOnClickListener {
@@ -37,6 +39,16 @@ class Settings : AppCompatActivity() {
             finish()
 
         }
+
+        val userInfo = findViewById<TextView>(R.id.userInfo)
+        //fetch email address from firebase
+        val email = FirebaseAuth.getInstance().currentUser?.email
+        userInfo.text = email
+
+        //fetch email address from database and display it
+
+
+
 
 
         val pass_butt = findViewById<Button>(R.id.pass_update)
