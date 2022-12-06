@@ -23,10 +23,27 @@ class Settings : AppCompatActivity() {
 
         }
 
+        val about_us = findViewById<Button>(R.id.tocbut)
+        about_us.setOnClickListener {
+            var intent: Intent = Intent(this, aboutus::class.java)
+            startActivity(intent)
+            finish()
+
+        }
+
 
         val pass_butt = findViewById<Button>(R.id.pass_update)
         pass_butt.setOnClickListener {
             var intent: Intent = Intent(this, change_password::class.java)
+            startActivity(intent)
+            finish()
+
+        }
+
+
+        val premium = findViewById<Button>(R.id.premium)
+        premium.setOnClickListener {
+            var intent: Intent = Intent(this, Premium::class.java)
             startActivity(intent)
             finish()
 
@@ -39,22 +56,14 @@ class Settings : AppCompatActivity() {
                 //   Intent intent = new Intent(AddExpense.this, contact_main.class);
                 //   startActivity(intent);
 
-           //     var intent: Intent = Intent(this, contact_main::class.java)
-          //      startActivity(intent)
-          //      finish()
+                //     var intent: Intent = Intent(this, contact_main::class.java)
+                //      startActivity(intent)
+                //      finish()
+
+
+                // }
 
             }
-
-            val premium = findViewById<Button>(R.id.premium)
-            premium.setOnClickListener {
-                var intent: Intent = Intent(this, Premium::class.java)
-                startActivity(intent)
-                finish()
-
-            }
-
-            // }
-
         }
     }
 

@@ -104,8 +104,8 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="540dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
@@ -113,6 +113,7 @@
                 android:backgroundTint="@color/blue_nu"
                 android:orientation="vertical"
                 android:padding="15dp">
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="74dp">
@@ -122,13 +123,13 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginBottom="13dp"
                         android:layout_marginTop="13dp"
+                        android:layout_marginBottom="13dp"
                         android:background="@drawable/round_back_security"
                         android:backgroundTint="@color/mustard"
                         android:padding="12dp"
                         android:src="@drawable/username"
-                        app:tint="@color/blue_nu"/>
+                        app:tint="@color/blue_nu" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -136,7 +137,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:src="@drawable/right_arrow_icon"
-                        app:tint="@color/mustard"/>
+                        app:tint="@color/mustard" />
 
                     <Button
                         android:id="@+id/change_user"
@@ -147,8 +148,8 @@
                         android:layout_alignParentBottom="true"
 
                         android:layout_marginTop="13dp"
-                        android:layout_marginBottom="13dp"
                         android:layout_marginEnd="26dp"
+                        android:layout_marginBottom="13dp"
                         android:layout_toEndOf="@+id/messageIcon"
                         android:fontFamily="@font/quicksand_bold"
                         android:stateListAnimator="@null"
@@ -195,7 +196,7 @@
 -->
                 <!-- About Us -->
 
-  <!--              <RelativeLayout
+                <!--              <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp">
@@ -229,53 +230,54 @@
                         android:fontFamily="@font/quicksand_semibold"/>
                 </RelativeLayout>
 -->
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="74dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp">
 
-                <ImageView
-                    android:id="@+id/faqIcon"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginTop="13dp"
-                    android:layout_marginBottom="13dp"
-                    android:background="@drawable/round_back_security"
-                    android:backgroundTint="@color/mustard"
-                    android:padding="12dp"
-                    android:src="@drawable/password"
-                    app:tint="@color/blue_nu"/>
+                    <ImageView
+                        android:id="@+id/faqIcon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginBottom="13dp"
+                        android:background="@drawable/round_back_security"
+                        android:backgroundTint="@color/mustard"
+                        android:padding="12dp"
+                        android:src="@drawable/password"
+                        app:tint="@color/blue_nu" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/right_arrow_icon"
-                    app:tint="@color/mustard"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/right_arrow_icon"
+                        app:tint="@color/mustard" />
 
-                <Button
-                    android:id="@+id/pass_update"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
+                    <Button
+                        android:id="@+id/pass_update"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
 
-                    android:layout_marginTop="13dp"
-                    android:layout_marginBottom="13dp"
-                    android:layout_marginEnd="26dp"
-                    android:layout_toEndOf="@+id/faqIcon"
-                    android:fontFamily="@font/quicksand_bold"
-                    android:stateListAnimator="@null"
-                    android:text="Update Password"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="18dp"
-                    app:backgroundTint="@color/blue_nu" />
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="26dp"
+                        android:layout_marginBottom="13dp"
+                        android:layout_toEndOf="@+id/faqIcon"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:stateListAnimator="@null"
+                        android:text="Update Password"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="18dp"
+                        app:backgroundTint="@color/blue_nu" />
 
-            </RelativeLayout>
+                </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="74dp">
@@ -291,7 +293,7 @@
                         android:backgroundTint="@color/mustard"
                         android:padding="12dp"
                         android:src="@drawable/contact"
-                        app:tint="@color/blue_nu"/>
+                        app:tint="@color/blue_nu" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -299,7 +301,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:src="@drawable/right_arrow_icon"
-                        app:tint="@color/mustard"/>
+                        app:tint="@color/mustard" />
 
                     <Button
                         android:id="@+id/contacts_butt"
@@ -310,8 +312,8 @@
                         android:layout_alignParentBottom="true"
 
                         android:layout_marginTop="13dp"
-                        android:layout_marginBottom="13dp"
                         android:layout_marginEnd="26dp"
+                        android:layout_marginBottom="13dp"
                         android:layout_toEndOf="@+id/aboutUsIcon"
                         android:fontFamily="@font/quicksand_bold"
                         android:stateListAnimator="@null"
@@ -323,6 +325,7 @@
                         app:backgroundTint="@color/blue_nu" />
 
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="74dp">
@@ -338,7 +341,7 @@
                         android:backgroundTint="@color/mustard"
                         android:padding="12dp"
                         android:src="@drawable/dollar"
-                        app:tint="@color/blue_nu"/>
+                        app:tint="@color/blue_nu" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -346,7 +349,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:src="@drawable/right_arrow_icon"
-                        app:tint="@color/mustard"/>
+                        app:tint="@color/mustard" />
 
                     <Button
                         android:id="@+id/premium"
@@ -356,8 +359,8 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginTop="13dp"
-                        android:layout_marginBottom="13dp"
                         android:layout_marginEnd="26dp"
+                        android:layout_marginBottom="13dp"
                         android:layout_toEndOf="@+id/premiumicon"
                         android:fontFamily="@font/quicksand_bold"
                         android:stateListAnimator="@null"
@@ -368,6 +371,7 @@
                         app:backgroundTint="@color/blue_nu" />
 
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="74dp">
@@ -383,7 +387,7 @@
                         android:backgroundTint="@color/mustard"
                         android:padding="12dp"
                         android:src="@drawable/toc"
-                        app:tint="@color/blue_nu"/>
+                        app:tint="@color/blue_nu" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -391,7 +395,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:src="@drawable/right_arrow_icon"
-                        app:tint="@color/mustard"/>
+                        app:tint="@color/mustard" />
 
                     <Button
                         android:id="@+id/tocbut"
@@ -401,18 +405,66 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginTop="13dp"
-                        android:layout_marginBottom="13dp"
                         android:layout_marginEnd="26dp"
+                        android:layout_marginBottom="13dp"
                         android:layout_toEndOf="@+id/Toc"
                         android:fontFamily="@font/quicksand_bold"
                         android:stateListAnimator="@null"
-                        android:text="Terms and conditions"
+                        android:text="About Us"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="16dp"
                         app:backgroundTint="@color/blue_nu" />
 
                 </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp">
+
+                    <ImageView
+                        android:id="@+id/privacyicon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginBottom="13dp"
+                        android:background="@drawable/round_back_security"
+                        android:backgroundTint="@color/white"
+                        android:padding="12dp"
+                        android:src="@drawable/logout_icon"
+                        app:tint="@color/orange" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/right_arrow_icon"
+                        app:tint="@color/mustard" />
+
+                    <Button
+                        android:id="@+id/terms_butt"
+                        android:layout_width="311dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="27dp"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginEnd="26dp"
+                        android:layout_marginBottom="13dp"
+                        android:layout_toEndOf="@+id/privacyicon"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:stateListAnimator="@null"
+                        android:text="Terms &amp; Conditions"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="18dp"
+                        app:backgroundTint="@color/blue_nu" />
+
+                </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="74dp">
@@ -428,8 +480,7 @@
                         android:backgroundTint="@color/white"
                         android:padding="12dp"
                         android:src="@drawable/logout_icon"
-                        app:tint="@color/orange"
-                        />
+                        app:tint="@color/orange" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -437,7 +488,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:src="@drawable/right_arrow_icon"
-                        app:tint="@color/mustard"/>
+                        app:tint="@color/mustard" />
 
                     <Button
                         android:id="@+id/logout_butt"
@@ -447,8 +498,8 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginTop="13dp"
-                        android:layout_marginBottom="13dp"
                         android:layout_marginEnd="26dp"
+                        android:layout_marginBottom="13dp"
                         android:layout_toEndOf="@+id/logOutIcon"
                         android:fontFamily="@font/quicksand_bold"
                         android:stateListAnimator="@null"
