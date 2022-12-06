@@ -35,6 +35,34 @@
 
     </com.wajahatkarim3.easyflipview.EasyFlipView>
 
+
+    <Button
+        android:id="@+id/cvvButton"
+        android:layout_width="154dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="129dp"
+
+        android:layout_marginTop="456dp"
+        android:layout_marginEnd="128dp"
+        android:background="@drawable/main_button"
+        android:fontFamily="@font/quicksand_bold"
+        android:gravity="center"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="CVV"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.763" />
+
     <Button
         android:id="@+id/payButton"
         android:layout_width="200dp"

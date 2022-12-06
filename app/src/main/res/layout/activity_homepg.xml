@@ -14,7 +14,7 @@
         android:background="@drawable/main_button2"
         android:fontFamily="@font/quicksand_bold"
         android:gravity="center"
-        android:backgroundTint="@color/blue_li"
+        android:backgroundTint="@color/lavender"
         android:text="Shop"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/dark_blue"
@@ -33,7 +33,7 @@
         android:layout_height="200dp"
         app:backgroundTint="@null"
         android:background="@drawable/main_button"
-        android:backgroundTint="@color/blue_li"
+        android:backgroundTint="@color/dark_orange"
         android:fontFamily="@font/quicksand_bold"
         android:text="Split"
         android:layout_marginBottom="50dp"
@@ -57,7 +57,7 @@
         android:paddingBottom="5dp"
         android:paddingLeft="25dp"
         android:paddingRight="25dp"
-        android:backgroundTint="@color/primary_green"
+        android:backgroundTint="@color/green_nu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -129,7 +129,7 @@
         android:paddingLeft="50dp"
         android:paddingRight="50dp"
         android:background="@drawable/shape_login_panel"
-        android:backgroundTint="@color/primary_green"
+        android:backgroundTint="@color/green_nu"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -139,7 +139,7 @@
 
         <ImageView
             android:id="@+id/icon5"
-            android:layout_width="250dp"
+            android:layout_width="230dp"
             android:layout_height="120dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
@@ -153,13 +153,28 @@
 
     <ImageView
         android:id="@+id/bg"
-        android:layout_width="775dp"
-        android:layout_height="775dp"
+        android:layout_width="407dp"
+        android:layout_height="414dp"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/bg"
-        app:tint="#4B000000"
+        app:tint="#4B272727"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/bg2"
+        android:layout_width="406dp"
+        android:layout_height="406dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/bg"
+        app:tint="#4B272727"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

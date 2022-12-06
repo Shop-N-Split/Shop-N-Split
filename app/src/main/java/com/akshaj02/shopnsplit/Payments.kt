@@ -24,6 +24,7 @@ class Payments : AppCompatActivity() {
 
         val mPayButton = findViewById<Button>(R.id.payButton)
 
+
         //when the user is typing in expiry date, add a "/" after the first 2 digits
         expiryDate.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {
