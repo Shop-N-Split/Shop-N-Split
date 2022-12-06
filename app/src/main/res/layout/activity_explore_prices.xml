@@ -7,6 +7,19 @@
     tools:context=".ExplorePrices"
     >
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="Explore Prices"
+        android:id="@+id/exploreprices"
+        android:textColor="@color/blck"
+        android:textSize="40dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/main_recyclervie"
+        app:layout_constraintEnd_toEndOf="@+id/main_recyclervie"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/main_recyclervie" />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/main_recyclervie"
         android:layout_width="360dp"
@@ -15,7 +28,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exploreprices"
         app:layout_constraintVertical_bias="0.0"
         app:elevation="10dp"
         />
