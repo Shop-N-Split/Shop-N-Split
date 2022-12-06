@@ -4,14 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddNewTask">
+    tools:context=".AddNewTask"
+    android:background="@color/blue_li"
+    >
 
     <EditText
         android:id="@+id/task_edittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:backgroundTint="@color/green"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="@color/blue_nu"
+        android:fontFamily="@font/quicksand_semibold"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:hint="Write Your Grocery Item ...."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -20,12 +27,20 @@
 
     <Button
         android:id="@+id/save_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="290dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:background="@drawable/rounded_corner"
+        app:backgroundTint="@color/blue_nu"
+        android:fontFamily="@font/quicksand_semibold"
+        android:textAllCaps="false"
+        android:textSize="20dp"
         android:text="Save"
+        app:elevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/task_edittext" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

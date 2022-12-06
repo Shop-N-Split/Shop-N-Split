@@ -37,6 +37,11 @@
     <color name="green_nu">#8fd8b5</color>
     <color name="mustard">#FABF48</color>
     <color name="blue_mus">#4883FA</color>
+    <color name="purple_nu">#C77DFF</color>
+    <color name="yellow">#e3d45a</color>
+    <color name="green_li">#5dbe74</color>
+    <color name="brwn">#1d1d1d</color>
+    <color name="blck">#070707</color>
 
     <!--Theme Color range-->
     <color name="night_mode">#6124B1</color>
