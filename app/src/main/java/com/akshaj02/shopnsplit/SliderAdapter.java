@@ -22,9 +22,9 @@ public class SliderAdapter extends PagerAdapter {
     }
 
     public int[] slide_colors = {
-            R.color.green,
+            R.color.green_nu,
             R.color.dark_orange,
-            R.color.blue,
+            R.color.blue_nu,
     };
 
     public int[] slide_images = {

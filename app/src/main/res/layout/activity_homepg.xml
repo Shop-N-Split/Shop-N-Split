@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F68964"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <Button
@@ -33,9 +33,8 @@
         android:layout_height="200dp"
         app:backgroundTint="@null"
         android:background="@drawable/main_button"
-        android:backgroundTint="@color/mustard"
+        android:backgroundTint="@color/blue_li"
         android:fontFamily="@font/quicksand_bold"
-        android:gravity="center"
         android:text="Split"
         android:layout_marginBottom="50dp"
         android:textAlignment="center"
@@ -58,7 +57,7 @@
         android:paddingBottom="5dp"
         android:paddingLeft="25dp"
         android:paddingRight="25dp"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/primary_green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -130,7 +129,7 @@
         android:paddingLeft="50dp"
         android:paddingRight="50dp"
         android:background="@drawable/shape_login_panel"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/primary_green"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
