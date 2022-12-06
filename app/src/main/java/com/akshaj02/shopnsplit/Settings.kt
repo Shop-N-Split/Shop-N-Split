@@ -14,7 +14,6 @@ class Settings : AppCompatActivity() {
         setContentView(R.layout.activity_settings)
         val permissions = arrayOf("android.permission.READ_CONTACTS")
 
-
         val logout_butt = findViewById<Button>(R.id.logout_butt)
         logout_butt.setOnClickListener {
             var intent: Intent = Intent(this, MainActivity::class.java)
@@ -26,6 +25,14 @@ class Settings : AppCompatActivity() {
         val about_us = findViewById<Button>(R.id.tocbut)
         about_us.setOnClickListener {
             var intent: Intent = Intent(this, aboutus::class.java)
+            startActivity(intent)
+            finish()
+
+        }
+
+        val terms_condition = findViewById<Button>(R.id.terms_butt)
+        terms_condition.setOnClickListener {
+            var intent: Intent = Intent(this, terms_cond::class.java)
             startActivity(intent)
             finish()
 
@@ -79,5 +86,9 @@ class Settings : AppCompatActivity() {
                 Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show()
             }
         }
+
+
     }
+
+
 }

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="349dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginBottom="25dp"
+        android:text="Terms and Conditions"
+        app:layout_constraintBottom_toTopOf="@+id/textView12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="411dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginBottom="290dp"
+        android:text="You may use our services only if you agree to these Terms of Service and to the processing of your information as described in our Privacy Policy. You may not use Splitwise if you are barred from receiving services under the laws of the applicable jurisdiction, if we previously banned your account for violation of these terms, or if you are under the age of 13."
+        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="405dp"
+        android:layout_height="109dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="403dp"
+        android:text=" Splitwise® (the Service) is a service designed to help you track informal debts, expenses, and bills, by allowing users to enter notes about who they owe, who owes them and why. The Service keeps track of the sharing math, provides informal sharing advice, and stores this data for later use. You agree that this service is provided AS-IS and on an AS AVAILABLE basis."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="403dp"
+        android:layout_height="143dp"
+        android:layout_marginBottom="264dp"
+        android:text="The website allows users who share a group or are friends on the service to post debts and payments as they please, using wiki-style rules with no explicit permissions. These are calculated into a determination of debts by the Service. You agree that you understand these debts are not legally binding, and represent informal information sharing among roommates, friends, or family. You agree that the Service cannot guarantee the accuracy of information entered by users."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="413dp"
+        android:layout_height="245dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:srcCompat="@drawable/piv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
