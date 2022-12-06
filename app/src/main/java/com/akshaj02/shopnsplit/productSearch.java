@@ -82,13 +82,13 @@ public class productSearch extends Activity {
 
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
-            if(extras == null) {
-                product= null;
+            if (extras == null) {
+                product = null;
             } else {
-                product= extras.getString("list");
+                product = extras.getString("list");
             }
         } else {
-            product= (String) savedInstanceState.getSerializable("list");
+            product = (String) savedInstanceState.getSerializable("list");
         }
 
         //Store each item into product1, product2, product3, etc. by tokenizing the product string separated by commas
@@ -116,7 +116,7 @@ public class productSearch extends Activity {
         prog();
     }
 
-    public void prog(){
+    public void prog() {
         mProgressbar = findViewById(R.id.progressBar);
         final Timer timer = new Timer();
         TimerTask timerTask = new TimerTask() {
@@ -124,16 +124,20 @@ public class productSearch extends Activity {
             public void run() {
                 counter++;
                 mProgressbar.setProgress(counter);
-                if(counter == 100){
+                if (counter == 100) {
                     timer.cancel();
                     Intent intent = new Intent(productSearch.this, ExplorePrices.class);
                     //TODO: Fix prices not showing up
-                    intent.putExtra("wTitles",walmartTitles);
+
+                    //round the prices to 2 decimal places
+                    walmartPriceString = String.format("%.2f", WTotal);
+                    targetPriceString = String.format("%.2f", TTotal);
+                    intent.putExtra("wTitles", walmartTitles);
                     intent.putExtra("tTitles", targetTitles);
                     intent.putExtra("wPrices", walmartPrices);
                     intent.putExtra("tPrices", targetPrices);
-                    intent.putExtra("WalmartTotal", /*walmartPriceString*/"10.99");
-                    intent.putExtra("TargetTotal", /*targetPriceString*/ "12.38");
+                    intent.putExtra("WalmartTotal", walmartPriceString);
+                    intent.putExtra("TargetTotal", targetPriceString);
                     startActivity(intent);
                     finish();
                 }
@@ -144,7 +148,7 @@ public class productSearch extends Activity {
     }
 
     //Make a function to make the URL
-    public void runSearch (String product) {
+    public void runSearch(String product) {
         String urlString = makeURL(product);
 
         URL url = null;
@@ -327,8 +331,8 @@ public class productSearch extends Activity {
                     walmartTitles = walmartTitles + walmartTitle + "#";
                     targetTitles = targetTitles + targetTitle + "#";
                     //Save the walmartPrice in an array separated by commas
-                    walmartPrices = walmartPrices + walmartPriceString + "#";
-                    targetPrices = targetPrices + targetPriceString + "#";
+                    walmartPrices = walmartPrices + walmartPrice + "#";
+                    targetPrices = targetPrices + targetPrice + "#";
 
                     // return the links to be displayed
                     return "Walmart" + "\n" + walmartTitle + "\n" + walmartPriceFloat + "\n\n" + "Target" + "\n" + targetTitle + "\n" + targetPrice;
@@ -367,7 +371,6 @@ public class productSearch extends Activity {
             //add the answers from doInBackground to an arraylist.
             //PreExecute: display a loading message
             //PostExecute: move to another activity and display the results there
-
 
 
             // hide mProgressBar

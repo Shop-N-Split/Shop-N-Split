@@ -27,8 +27,7 @@ public class ExplorePrices extends AppCompatActivity {
     private String WalmartTotal = "";
     private String TargetTotal = "";
 
-    Button mHomepage;
-    Button mSplit;
+    Button mHome;
 
 
     @SuppressLint("MissingInflatedId")
@@ -41,22 +40,12 @@ public class ExplorePrices extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        mHomepage = findViewById(R.id.homepage);
+        mHome = findViewById(R.id.home_button);
 
-        mHomepage.setOnClickListener(new View.OnClickListener() {
+        mHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ExplorePrices.this, homepage.class);
-                startActivity(intent);
-            }
-        });
-
-        mSplit = findViewById(R.id.split_button);
-
-        mSplit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ExplorePrices.this, Split.class);
                 startActivity(intent);
             }
         });
@@ -90,9 +79,9 @@ public class ExplorePrices extends AppCompatActivity {
         //tokenize the strings
         String[] wTitles = walTitles.split("#");
         String[] wPrices = walPrices.split("#");
+
         String[] tTitles = tarTitles.split("#");
         String[] tPrices = tarPrices.split("#");
-
 
         mList = new ArrayList<>();
 
@@ -111,25 +100,43 @@ public class ExplorePrices extends AppCompatActivity {
             }
         }
 
+//        String[] wTitlesPrices = new String[wTitles.length + wPrices.length];
+//        System.arraycopy(wTitles, 0, wTitlesPrices, 0, wTitles.length);
+//        System.arraycopy(wPrices, 0, wTitlesPrices, wTitles.length, wPrices.length);
+//
+//        String[] tTitlesPrices = new String[tTitles.length + tPrices.length];
+//        System.arraycopy(tTitles, 0, tTitlesPrices, 0, tTitles.length);
+//        System.arraycopy(tPrices, 0, tTitlesPrices, tTitles.length, tPrices.length);
+
+
+
+//        Merge wTitles and wPrices to a new array
+        String[] wTitlesPrices = new String[wTitles.length];
+        for (int i = 0; i < wTitles.length; i++) {
+            wTitlesPrices[i] = wTitles[i] + "          $" + wPrices[i];
+        }
+
+        //Merge tTitles and tPrices to a new array
+        String[] tTitlesPrices = new String[tTitles.length];
+        for (int i = 0; i < tTitles.length; i++) {
+            tTitlesPrices[i] = tTitles[i] + "          $" + tPrices[i];
+        }
+
         //list1
         List<String> nestedList1 = new ArrayList<>();
-        nestedList1.add(wTitles[0]);
-        nestedList1.add(wTitles[1]);
-        nestedList1.add(wTitles[2]);
-        nestedList1.add(wTitles[3]);
-        nestedList1.add(wTitles[4]);
-        //nestedList1.add(WalmartTotal);
-        //nestedList1.add(TargetTotal);
+        nestedList1.add(wTitlesPrices[0]);
+        nestedList1.add(wTitlesPrices[1]);
+        nestedList1.add(wTitlesPrices[2]);
+        nestedList1.add(wTitlesPrices[3]);
+        nestedList1.add(wTitlesPrices[4]);
 
 
         List<String> nestedList2 = new ArrayList<>();
-        nestedList2.add(tTitles[0]);
-        nestedList2.add(tTitles[1]);
-        nestedList2.add(tTitles[2]);
-        nestedList2.add(tTitles[3]);
-        nestedList2.add(tTitles[4]);
-        //nestedList2.add(WalmartTotal);
-        //nestedList2.add(TargetTotal);
+        nestedList2.add(tTitlesPrices[0]);
+        nestedList2.add(tTitlesPrices[1]);
+        nestedList2.add(tTitlesPrices[2]);
+        nestedList2.add(tTitlesPrices[3]);
+        nestedList2.add(tTitlesPrices[4]);
 
 
         mList.add(new DataModel(nestedList1 , "Walmart", WalmartTotal));
