@@ -16,13 +16,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/blue_nu">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="108dp"
-        tools:layout_editor_absoluteY="0dp">
+        >
 
 
         <TextView
@@ -112,5 +113,4 @@
             app:layout_constraintStart_toStartOf="@+id/text2"
             app:layout_constraintTop_toBottomOf="@+id/text2" />
     </androidx.cardview.widget.CardView>
-    Ï
 </androidx.constraintlayout.widget.ConstraintLayout>

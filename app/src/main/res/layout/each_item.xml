@@ -26,9 +26,9 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="Stores"
-                android:textColor="@color/green"
+                android:textColor="@color/green_nu"
                 android:textSize="18sp"
-                android:textStyle="bold"
+                android:fontFamily="@font/quicksand_bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.214"
@@ -41,6 +41,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Total"
+                android:fontFamily="@font/quicksand_medium"
+                android:textColor="@color/brwn"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/arro_imageview"
                 app:layout_constraintHorizontal_bias="0.722"
@@ -55,6 +57,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="16dp"
                 android:src="@drawable/arrow_down"
+                app:tint="@color/brwn"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 

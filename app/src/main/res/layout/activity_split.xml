@@ -46,9 +46,9 @@
 
     <Button
         android:id="@+id/split_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="456dp"
+        android:layout_width="290dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="490dp"
         android:background="@drawable/main_button"
         android:fontFamily="@font/quicksand_bold"
         android:gravity="center"
@@ -73,7 +73,6 @@
         android:id="@+id/splitRecycler"
 
         android:layout_marginBottom="49dp"
-        app:layout_constraintBottom_toBottomOf="@+id/split"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/top_Layout" />

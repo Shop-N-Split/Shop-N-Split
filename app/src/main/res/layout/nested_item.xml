@@ -15,10 +15,11 @@
         android:layout_gravity="left"
         android:layout_marginLeft="9dp"
         android:layout_marginTop="19dp"
+        android:fontFamily="@font/quicksand_semibold"
         android:text="Grocery and Stationary"
-        android:textColor="@color/blue"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textColor="@color/blue_nu"
+        android:textSize="14dp"
+        />
 
 
 </androidx.cardview.widget.CardView>
