@@ -8,14 +8,16 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.akshaj02.shopnsplit.ContactsPickerActivity"
-    android:background="@color/brwn">
+    android:background="@color/green_nu">
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txt_filter"
         android:hint="@string/txt_search"
-        android:textColorHint="@color/blue_li"
-        android:textColor="@color/white"
+        android:backgroundTint="@color/blue_nu"
+        android:fontFamily="@font/quicksand_bold"
+        android:textColorHint="@color/blue_nu"
+        android:textColor="@color/blue_nu"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -25,8 +27,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txt_load_progress"
+        android:fontFamily="@font/quicksand_semibold"
         android:layout_below="@+id/txt_filter"
-        android:textColor="@color/white"
+        android:textColor="@color/blue_nu"
         android:text="Loading..."
         />
 
