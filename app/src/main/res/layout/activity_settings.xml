@@ -63,8 +63,7 @@
                 <!-- Private Account-->
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
+                    android:layout_height="wrap_content">
 
                     <ImageView
                         android:id="@+id/privateAccountIcon"
@@ -131,22 +130,15 @@
                         android:src="@drawable/username"
                         app:tint="@color/blue_nu" />
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/right_arrow_icon"
-                        app:tint="@color/mustard" />
 
-                    <Button
-                        android:id="@+id/change_user"
+                    <TextView
+                        android:id="@+id/userInfo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
-
+                        android:gravity="center_vertical"
                         android:layout_marginTop="13dp"
                         android:layout_marginEnd="26dp"
                         android:layout_marginBottom="13dp"
@@ -157,7 +149,7 @@
                         android:textAlignment="center"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
-                        android:textSize="18dp"
+                        android:textSize="18dp" />
                         app:backgroundTint="@color/blue_nu" />
 
                 </RelativeLayout>
