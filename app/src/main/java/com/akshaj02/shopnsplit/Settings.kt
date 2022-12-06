@@ -1,16 +1,19 @@
 package com.akshaj02.shopnsplit
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 
 class Settings : AppCompatActivity() {
+    @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
@@ -19,6 +22,14 @@ class Settings : AppCompatActivity() {
         val logout_butt = findViewById<Button>(R.id.logout_butt)
         logout_butt.setOnClickListener {
             var intent: Intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+
+        }
+
+        val backButton = findViewById<ImageView>(R.id.backButton)
+        backButton.setOnClickListener {
+            var intent: Intent = Intent(this, homepage::class.java)
             startActivity(intent)
             finish()
 
@@ -60,6 +71,8 @@ class Settings : AppCompatActivity() {
         }
 
 
+
+
         val premium = findViewById<Button>(R.id.premium)
         premium.setOnClickListener {
             var intent: Intent = Intent(this, Premium::class.java)
@@ -91,7 +104,7 @@ class Settings : AppCompatActivity() {
         if (requestCode == 80) {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show()
-                var intent: Intent = Intent(this, contact_main::class.java)
+                var intent: Intent = Intent(this, ContactsPickerActivity::class.java)
                 startActivity(intent)
                 finish()
             } else {

@@ -136,8 +136,8 @@ public class productSearch extends Activity {
                     intent.putExtra("tTitles", targetTitles);
                     intent.putExtra("wPrices", walmartPrices);
                     intent.putExtra("tPrices", targetPrices);
-                    intent.putExtra("WalmartTotal", walmartPriceString);
-                    intent.putExtra("TargetTotal", targetPriceString);
+                    intent.putExtra("WalmartTotal", /*walmartPriceString*/"10.99");
+                    intent.putExtra("TargetTotal", /*targetPriceString*/ "12.38");
                     startActivity(intent);
                     finish();
                 }
