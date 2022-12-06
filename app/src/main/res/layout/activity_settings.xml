@@ -52,6 +52,7 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/round_back_whiite10_20"
+                android:backgroundTint="@color/blue_nu"
                 android:orientation="vertical"
                 android:padding="15dp">
 
@@ -72,7 +73,7 @@
                         android:layout_alignParentTop="true"
                         android:layout_alignParentBottom="true"
                         android:background="@drawable/round_back_private_account"
-                        android:backgroundTint="@color/orange"
+                        android:backgroundTint="@color/mustard"
                         android:padding="12dp"
                         android:src="@drawable/notification_icon"
                         app:tint="@color/blue_nu"
@@ -89,7 +90,7 @@
                         android:fontFamily="@font/quicksand_bold"
                         android:text="Enable Notifications"
                         android:textAlignment="center"
-                        android:textColor="@color/blue_nu"
+                        android:textColor="@color/white"
                         android:textSize="18dp" />
 
                     <androidx.appcompat.widget.SwitchCompat
@@ -97,7 +98,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
-                        android:color="@color/blue_nu"
+                        android:color="@color/mustard"
                         android:switchMinWidth="50dp" />
                 </RelativeLayout>
             </LinearLayout>
@@ -109,6 +110,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/round_back_whiite10_20"
+                android:backgroundTint="@color/blue_nu"
                 android:orientation="vertical"
                 android:padding="15dp">
                 <RelativeLayout
@@ -123,7 +125,7 @@
                         android:layout_marginBottom="13dp"
                         android:layout_marginTop="13dp"
                         android:background="@drawable/round_back_security"
-                        android:backgroundTint="@color/orange"
+                        android:backgroundTint="@color/mustard"
                         android:padding="12dp"
                         android:src="@drawable/username"
                         app:tint="@color/blue_nu"/>
@@ -134,7 +136,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:src="@drawable/right_arrow_icon"
-                        app:tint="@color/blue_nu"/>
+                        app:tint="@color/mustard"/>
 
                     <Button
                         android:id="@+id/change_user"
@@ -153,9 +155,9 @@
                         android:text="Change Username"
                         android:textAlignment="center"
                         android:textAllCaps="false"
-                        android:textColor="@color/blue_nu"
+                        android:textColor="@color/white"
                         android:textSize="18dp"
-                        app:backgroundTint="#FAC55B" />
+                        app:backgroundTint="@color/blue_nu" />
 
                 </RelativeLayout>
 
@@ -239,7 +241,7 @@
                     android:layout_marginTop="13dp"
                     android:layout_marginBottom="13dp"
                     android:background="@drawable/round_back_security"
-                    android:backgroundTint="@color/orange"
+                    android:backgroundTint="@color/mustard"
                     android:padding="12dp"
                     android:src="@drawable/password"
                     app:tint="@color/blue_nu"/>
@@ -250,7 +252,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:src="@drawable/right_arrow_icon"
-                    app:tint="@color/blue_nu"/>
+                    app:tint="@color/mustard"/>
 
                 <Button
                     android:id="@+id/pass_update"
@@ -269,9 +271,9 @@
                     android:text="Update Password"
                     android:textAlignment="center"
                     android:textAllCaps="false"
-                    android:textColor="@color/blue_nu"
+                    android:textColor="@color/white"
                     android:textSize="18dp"
-                    app:backgroundTint="#FAC55B" />
+                    app:backgroundTint="@color/blue_nu" />
 
             </RelativeLayout>
                 <RelativeLayout
@@ -286,7 +288,7 @@
                         android:layout_marginTop="13dp"
                         android:layout_marginBottom="13dp"
                         android:background="@drawable/round_back_security"
-                        android:backgroundTint="@color/orange"
+                        android:backgroundTint="@color/mustard"
                         android:padding="12dp"
                         android:src="@drawable/contact"
                         app:tint="@color/blue_nu"/>
@@ -297,7 +299,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:src="@drawable/right_arrow_icon"
-                        app:tint="@color/blue_nu"/>
+                        app:tint="@color/mustard"/>
 
                     <Button
                         android:id="@+id/contacts_butt"
@@ -316,9 +318,9 @@
                         android:text="Display Contacts"
                         android:textAlignment="center"
                         android:textAllCaps="false"
-                        android:textColor="@color/blue_nu"
+                        android:textColor="@color/white"
                         android:textSize="18dp"
-                        app:backgroundTint="#FAC55B" />
+                        app:backgroundTint="@color/blue_nu" />
 
                 </RelativeLayout>
                 <RelativeLayout
@@ -333,7 +335,7 @@
                         android:layout_marginTop="13dp"
                         android:layout_marginBottom="13dp"
                         android:background="@drawable/round_back_security"
-                        android:backgroundTint="@color/orange"
+                        android:backgroundTint="@color/mustard"
                         android:padding="12dp"
                         android:src="@drawable/dollar"
                         app:tint="@color/blue_nu"/>
@@ -344,7 +346,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:src="@drawable/right_arrow_icon"
-                        app:tint="@color/blue_nu"/>
+                        app:tint="@color/mustard"/>
 
                     <Button
                         android:id="@+id/premium"
@@ -361,9 +363,9 @@
                         android:stateListAnimator="@null"
                         android:text="Premium"
                         android:textAllCaps="false"
-                        android:textColor="@color/blue_nu"
+                        android:textColor="@color/white"
                         android:textSize="18dp"
-                        app:backgroundTint="#FAC55B" />
+                        app:backgroundTint="@color/blue_nu" />
 
                 </RelativeLayout>
                 <RelativeLayout
@@ -378,7 +380,7 @@
                         android:layout_marginTop="13dp"
                         android:layout_marginBottom="13dp"
                         android:background="@drawable/round_back_security"
-                        android:backgroundTint="@color/orange"
+                        android:backgroundTint="@color/mustard"
                         android:padding="12dp"
                         android:src="@drawable/toc"
                         app:tint="@color/blue_nu"/>
@@ -389,7 +391,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:src="@drawable/right_arrow_icon"
-                        app:tint="@color/blue_nu"/>
+                        app:tint="@color/mustard"/>
 
                     <Button
                         android:id="@+id/tocbut"
@@ -406,9 +408,9 @@
                         android:stateListAnimator="@null"
                         android:text="Terms and conditions"
                         android:textAllCaps="false"
-                        android:textColor="@color/blue_nu"
+                        android:textColor="@color/white"
                         android:textSize="16dp"
-                        app:backgroundTint="#FAC55B" />
+                        app:backgroundTint="@color/blue_nu" />
 
                 </RelativeLayout>
                 <RelativeLayout
@@ -423,10 +425,10 @@
                         android:layout_marginTop="13dp"
                         android:layout_marginBottom="13dp"
                         android:background="@drawable/round_back_security"
-                        android:backgroundTint="@color/blue_nu"
+                        android:backgroundTint="@color/white"
                         android:padding="12dp"
                         android:src="@drawable/logout_icon"
-                        app:tint="@color/white"
+                        app:tint="@color/orange"
                         />
 
                     <ImageView
@@ -435,7 +437,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:src="@drawable/right_arrow_icon"
-                        app:tint="@color/blue_nu"/>
+                        app:tint="@color/mustard"/>
 
                     <Button
                         android:id="@+id/logout_butt"
@@ -452,9 +454,9 @@
                         android:stateListAnimator="@null"
                         android:text="Logout"
                         android:textAllCaps="false"
-                        android:textColor="@color/blue_nu"
+                        android:textColor="@color/white"
                         android:textSize="18dp"
-                        app:backgroundTint="#FAC55B" />
+                        app:backgroundTint="@color/blue_nu" />
 
                 </RelativeLayout>
             </LinearLayout>

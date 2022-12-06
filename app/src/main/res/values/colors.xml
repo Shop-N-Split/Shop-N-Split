@@ -36,6 +36,8 @@
     <color name="orange">#ff6d3b</color>
     <color name="green_nu">#8fd8b5</color>
     <color name="mustard">#FABF48</color>
+    <color name="blue_mus">#4883FA</color>
+
     <!--Theme Color range-->
     <color name="night_mode">#6124B1</color>
     <color name="notifications">#13B2C3</color>
