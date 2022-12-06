@@ -54,14 +54,47 @@ public class Split extends AppCompatActivity {
 //        String contactList3 = contactList2.replaceAll(" ,", ",");
 //        //remove the comma at the end
 //        String contactList4 = contactList3.replaceAll(",$", "");
-        String amountLent = "15.00";
-        //Split the money owed by the number of contacts
-//        double money = Double.parseDouble(moneyOwed);
-//        double moneySplit = money/count;
-//        double total = moneySplit * (count-1);
-//        String amountLent = Double.toString(total);
+//        if(expense != null && moneyOwed != null && date != null) {
+//            mList = new ArrayList<>();
+//            String moneyPaid = "0.00";
+//            mList.add(new SplitModel(expense, data, moneyOwed, moneyPaid));
+//            adapter = new SplitAdapter(this, mList);
+//            recyclerView = findViewById(R.id.main_recyclervie);
+//            recyclerView.setHasFixedSize(true);
+//            recyclerView.setLayoutManager(new LinearLayoutManager(this));
+//            recyclerView.setAdapter(adapter);
+//        }
+//        else {
+//            mList = new ArrayList<>();
+//            mList.add(new SplitModel("Expense", "Dec 5", "100", "0.00"));
+//            adapter = new SplitAdapter(this, mList);
+//            recyclerView = findViewById(R.id.main_recyclervie);
+//            recyclerView.setHasFixedSize(true);
+//            recyclerView.setLayoutManager(new LinearLayoutManager(this));
+//            recyclerView.setAdapter(adapter);
+//        }
 
-        initData(expense, date, moneyOwed, amountLent);
+        String amountLent = "100.00";
+       //Delete the null character from the string moneyOwed
+//        amountLent = moneyOwed.replaceAll("\u0000", "");
+        //convert amountLent to a float
+        float amountLentFloat = Float.parseFloat(amountLent);
+        //divide the amountLent by the number of contacts
+        float amountLentPerPerson = (float) (amountLentFloat * 0.75);
+        //convert the amountLentPerPerson to a string
+        String amountLentPerPersonString = String.valueOf(amountLentPerPerson);
+
+
+
+        //Split the money owed by the number of contacts
+//        float amountLent1 = Float.parseFloat(moneyOwed);
+//        float amountLent2 = amountLent1 / 4;
+//        //round the amount to 2 decimal places
+//        String amountLent3 = String.format("%.2f", amountLent2);
+
+
+
+        initData(expense, date, moneyOwed, amountLentPerPersonString);
         initRecyclerView();
 
 
@@ -88,9 +121,9 @@ public class Split extends AppCompatActivity {
         adapter.notifyDataSetChanged();
 
     }
-    private void initData(String expense, String date, String moneyOwed, String amountLent) {
+    private void initData(String expense, String date, String moneyOwed, String amountLent3) {
         mList = new ArrayList<>();
         //Hardcoded data, need to get data from AddExpense.java
-        mList.add(new SplitModel(expense, date, "200", "250"));
+        mList.add(new SplitModel(expense, date, "200", amountLent3));
     }
 }
