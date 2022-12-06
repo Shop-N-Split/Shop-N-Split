@@ -36,12 +36,12 @@ class Settings : AppCompatActivity() {
         }
 
         val about_us = findViewById<Button>(R.id.tocbut)
-//        about_us.setOnClickListener {
-//            var intent: Intent = Intent(this, aboutus::class.java)
-//            startActivity(intent)
-//            finish()
-//
-//        }
+        about_us.setOnClickListener {
+            var intent: Intent = Intent(this, aboutus::class.java)
+            startActivity(intent)
+            finish()
+
+        }
 
         val terms_condition = findViewById<Button>(R.id.terms_butt)
         terms_condition.setOnClickListener {
