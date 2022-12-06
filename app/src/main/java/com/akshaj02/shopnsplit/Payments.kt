@@ -48,27 +48,27 @@ class Payments : AppCompatActivity() {
                 //if the number of digits is 16, separate it with a space every 4 digits
                 when (cardNumber.text.toString().length) {
                     16 -> {
+                        cardNumberValid = isValid(cardNumber.text.toString())
                         val cardNumberString = cardNumber.text.toString()
                         val cardNumberString1 = cardNumberString.substring(0, 4)
                         val cardNumberString2 = cardNumberString.substring(4, 8)
                         val cardNumberString3 = cardNumberString.substring(8, 12)
                         val cardNumberString4 = cardNumberString.substring(12, 16)
                         cardNumber.setText("$cardNumberString1 $cardNumberString2 $cardNumberString3 $cardNumberString4")
-                        cardNumberValid = isValid(cardNumber.text.toString())
+
                     }
 
                     //if the number of digits is 15, separate it with a space every 4, 5 and 5 digits
                     15 -> {
+                        cardNumberValid = isValid(cardNumber.text.toString())
                         val cardNumberString = cardNumber.text.toString()
                         val cardNumberString1 = cardNumberString.substring(0, 4)
                         val cardNumberString2 = cardNumberString.substring(4, 10)
                         val cardNumberString3 = cardNumberString.substring(10, 15)
                         cardNumber.setText("$cardNumberString1 $cardNumberString2 $cardNumberString3")
-                        cardNumberValid = isValid(cardNumber.text.toString())
-
                     }
+
                     else -> {
-                        cardNumber.error = "Please enter a valid card number."
                         cardNumberValid = false
                     }
                 }
@@ -117,21 +117,25 @@ class Payments : AppCompatActivity() {
             }
 
 
+
+
             if(cardNumberValid) {
                 if (name.text.toString().isEmpty()) {
                     name.error = "Please enter your name."
                 }
-                if (expiryDate.text.toString().isEmpty()) {
+                else if (expiryDate.text.toString().isEmpty()) {
                     expiryDate.error = "Please enter your expiry date."
                 }
                 //if the first two digits of the expiry date are greater than 12, show an error
-                if (expiryDate.text.toString().substring(0, 2).toInt() > 12) {
+                else if (expiryDate.text.toString().substring(0, 2).toInt() > 12) {
                     expiryDate.error = "Please enter a valid expiry date."
                 }
+                else {
                 Toast.makeText(this, "Payment Successful", Toast.LENGTH_SHORT).show()
                 //move to next activity
                 Intent(this, Premium::class.java).also {
                     startActivity(it)
+                }
                 }
             }
             else {
