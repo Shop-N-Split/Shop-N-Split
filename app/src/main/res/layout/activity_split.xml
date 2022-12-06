@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/dark_orange"
     tools:context=".MainActivity">
 
 
@@ -27,7 +27,7 @@
         android:paddingTop="20dp"
         android:paddingLeft="80dp"
         android:paddingRight="80dp"
-        android:backgroundTint="@color/dark_orange"
+        android:backgroundTint="@color/green_nu"
         app:elevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +58,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/white"
         android:textSize="20dp"
-        app:backgroundTint="@null"
+        app:backgroundTint="@color/green_nu"
         app:layout_constraintBottom_toBottomOf="parent"
 
         app:layout_constraintEnd_toEndOf="parent"
