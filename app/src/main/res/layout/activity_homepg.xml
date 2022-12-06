@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/orange"
+    android:background="#F68964"
     tools:context=".MainActivity">
 
     <Button
@@ -18,8 +18,8 @@
         android:text="Shop"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/dark_blue"
-        android:textSize="30dp"
-
+        android:textSize="50dp"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/split"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,10 +37,11 @@
         android:fontFamily="@font/quicksand_bold"
         android:gravity="center"
         android:text="Split"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="100dp"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/dark_blue"
-        android:textSize="30dp"
+        android:textSize="50dp"
         android:elevation="20dp"
         app:layout_constraintBottom_toTopOf="@+id/Bottom_Layout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +73,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            app:tint="@color/blue_nu"
+            app:tint="@color/dark_blue"
             app:srcCompat="@drawable/home"
             android:elevation="10dp"
 
@@ -88,7 +89,7 @@
             android:layout_marginBottom="16dp"
             android:elevation="10dp"
             android:layout_toEndOf="@+id/icon1"
-            app:tint="@color/blue_nu"
+            app:tint="@color/dark_blue"
             app:srcCompat="@drawable/notes" />
         <ImageView
             android:id="@+id/icon3"
@@ -98,7 +99,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            app:tint="@color/blue_nu"
+            app:tint="@color/dark_blue"
             android:layout_toEndOf="@+id/icon2"
             app:srcCompat="@drawable/bill"
             android:elevation="10dp"
@@ -111,7 +112,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            app:tint="@color/blue_nu"
+            app:tint="@color/dark_blue"
             android:layout_toEndOf="@+id/icon3"
             app:srcCompat="@drawable/settings"
             android:elevation="10dp"
@@ -146,7 +147,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:layout_centerHorizontal="true"
-            app:tint="@color/blue_nu"
+            app:tint="@color/dark_blue"
             app:srcCompat="@drawable/logoresize" />
 
     </RelativeLayout>

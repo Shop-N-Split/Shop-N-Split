@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary_green"
+    android:background="@color/blue_li"
     tools:context=".MainActivity">
 
     <RelativeLayout
@@ -13,6 +13,7 @@
         android:layout_height="452dp"
         android:layout_marginBottom="64dp"
         android:background="@drawable/shape_login_panel"
+        android:backgroundTint="@color/white"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +35,7 @@
             android:layout_marginBottom="232dp"
             android:fontFamily="@font/quicksand_semibold"
             android:text="Forgot password?"
-            android:textColor="@color/Secondary_green"
+            android:textColor="@color/blue_nu"
             app:elevation="10dp"
 
             />
@@ -92,20 +93,24 @@
             android:layout_marginStart="279dp"
             android:layout_marginEnd="30dp"
             android:layout_marginBottom="276dp"
+            app:tint="@color/blue_nu"
             android:src="@drawable/invisible" />
+
+
 
     </RelativeLayout>
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="163dp"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50dp"
         android:layout_marginTop="48dp"
         android:fontFamily="@font/quicksand_bold"
         android:gravity="center"
-        android:text="Log in"
+        android:text="Log In"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="@color/Secondary_green"
+        android:textColor="@color/dark_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -119,38 +124,13 @@
         android:fontFamily="@font/quicksand_medium"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        android:textColor="@color/Secondary_green"
-        android:textColorHint="@color/primary_green"
+        android:textColor="@color/dark_blue"
+        android:textColorHint="@color/blue_nu"
+        android:backgroundTint="@color/blue_li"
         android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toTopOf="@+id/linearLayout" />
-
-    <!--    <Button-->
-    <!--        android:id="@+id/login"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="sign in"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="0.498"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/password"-->
-    <!--        app:layout_constraintVertical_bias="0.052"-->
-    <!--        android:background="@drawable/ripple_effect"/>-->
-
-    <!--    <Button-->
-    <!--        android:id="@+id/register"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="96dp"-->
-    <!--        android:background="@drawable/ripple_effect"-->
-    <!--        android:text="not a member? Register"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="0.497"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/login" />-->
-
 
     <TextView
         android:id="@+id/signin"
@@ -162,8 +142,9 @@
         android:gravity="center"
         android:text="Sign In"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/black"
-        app:elevation="10dp"
+        android:textColor="@color/white"
+        app:elevation="20dp"
+        app:backgroundTint="@color/orange"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/password" />
@@ -177,9 +158,10 @@
         android:fontFamily="@font/quicksand_semibold"
         android:gravity="center"
         android:text="Register"
+        app:backgroundTint="@color/blue_li"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/black"
-        app:elevation="10dp"
+        android:textColor="@color/white"
+        app:elevation="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout" />
@@ -207,11 +189,12 @@
         android:layout_marginTop="14dp"
         android:layout_marginRight="40dp"
         android:autofillHints=""
-        android:fontFamily="@font/quicksand_medium"
+        android:fontFamily="@font/quicksand_semibold"
         android:hint="Password"
         android:inputType="textPassword"
-        android:textColor="@color/Secondary_green"
-        android:textColorHint="@color/primary_green"
+        android:textColor="@color/dark_blue"
+        android:textColorHint="@color/blue_nu"
+        android:backgroundTint="@color/blue_li"
         android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"

@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".productSearch">
+    tools:context=".productSearch"
+    android:background="@color/mustard"
+    >
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -14,14 +16,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="167dp"
-        android:layout_height="41dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Loading"
-        android:textSize="30dp"
+        android:textSize="40dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:textColor="@color/blue_nu"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
