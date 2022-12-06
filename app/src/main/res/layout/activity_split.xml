@@ -20,14 +20,14 @@
         android:id="@+id/top_Layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/shape_login_panel"
         android:orientation="horizontal"
-        android:padding="50dp"
-
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
-
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:paddingLeft="80dp"
+        android:paddingRight="80dp"
+        android:backgroundTint="@color/dark_orange"
         app:elevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,8 +39,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/quicksand_bold"
             android:text="Split"
-            android:textColor="@color/Secondary_green"
-            android:textSize="20sp" />
+            android:textColor="@color/white"
+            android:textSize="50sp" />
 
     </RelativeLayout>
 

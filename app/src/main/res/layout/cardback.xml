@@ -19,6 +19,7 @@
         android:layout_height="42dp"
         android:ems="10"
         android:hint="CVV"
+        android:fontFamily="@font/quicksand_bold"
         android:inputType="numberPassword"
         android:textColor="@color/white"
         android:textColorHint="@color/white"

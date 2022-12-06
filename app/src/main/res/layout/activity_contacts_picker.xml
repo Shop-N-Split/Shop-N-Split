@@ -7,12 +7,15 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.akshaj02.shopnsplit.ContactsPickerActivity">
+    tools:context="com.akshaj02.shopnsplit.ContactsPickerActivity"
+    android:background="@color/brwn">
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txt_filter"
         android:hint="@string/txt_search"
+        android:textColorHint="@color/blue_li"
+        android:textColor="@color/white"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -23,6 +26,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/txt_load_progress"
         android:layout_below="@+id/txt_filter"
+        android:textColor="@color/white"
         android:text="Loading..."
         />
 
@@ -32,12 +36,19 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/txt_load_progress"
         android:layout_above="@+id/btn_done"
+        android:textColor="@color/white"
         android:id="@+id/lst_contacts_chooser"
     />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_done"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/blue_li"
+        android:fontFamily="@font/quicksand_semibold"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         android:layout_alignParentBottom="true"
         android:text="@string/txt_done"
         />
