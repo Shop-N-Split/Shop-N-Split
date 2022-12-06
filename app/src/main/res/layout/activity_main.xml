@@ -199,6 +199,4 @@
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/emailAddress" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -161,75 +161,6 @@
                         app:backgroundTint="@color/blue_nu" />
 
                 </RelativeLayout>
-
-                <!--<RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:id="@+id/messageIcon"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:background="@drawable/round_back_private_account"
-                        android:padding="12dp"
-                        android:src="@drawable/message_icon" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="32dp"
-                        android:layout_marginStart="25dp"
-                        android:layout_toEndOf="@+id/messageIcon"
-                        android:text="Change username"
-                        android:textColor="@color/white"
-                        android:fontFamily="@font/quicksand_semibold"
-                        />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/right_arrow_icon"
-                        app:tint="@color/blue_nu"
-                        />
-                </RelativeLayout>
--->
-                <!-- About Us -->
-
-                <!--              <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
-
-                    <ImageView
-                        android:id="@+id/faqIcon"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:background="@drawable/round_back_night_mode"
-                        android:padding="12dp"
-                        android:src="@drawable/faq_icon" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:contentDescription="TODO"
-                        android:src="@drawable/right_arrow_icon" />
-
-                    <Button
-                        android:id="@+id/pass_update"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginStart="24dp"
-                        android:layout_marginEnd="26dp"
-                        android:layout_marginBottom="8dp"
-                        android:text="Update Password"
-                        android:textSize="12sp"
-                        android:textColor="@color/white"
-                        android:fontFamily="@font/quicksand_semibold"/>
-                </RelativeLayout>
--->
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="74dp">
@@ -386,7 +317,7 @@
                         android:background="@drawable/round_back_security"
                         android:backgroundTint="@color/mustard"
                         android:padding="12dp"
-                        android:src="@drawable/toc"
+                        android:src="@drawable/info"
                         app:tint="@color/blue_nu" />
 
                     <ImageView
@@ -427,13 +358,12 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginTop="13dp"
                         android:layout_marginBottom="13dp"
                         android:background="@drawable/round_back_security"
-                        android:backgroundTint="@color/white"
+                        android:backgroundTint="@color/mustard"
                         android:padding="12dp"
-                        android:src="@drawable/logout_icon"
-                        app:tint="@color/orange" />
+                        android:src="@drawable/toc"
+                        app:tint="@color/blue_nu" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -511,7 +441,6 @@
 
                 </RelativeLayout>
             </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

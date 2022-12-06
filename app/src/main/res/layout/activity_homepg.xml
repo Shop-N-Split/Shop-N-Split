@@ -9,12 +9,12 @@
     <Button
         android:id="@+id/shop"
         android:layout_width="297dp"
-        android:layout_height="157dp"
+        android:layout_height="200dp"
         app:backgroundTint="@null"
         android:background="@drawable/main_button2"
         android:fontFamily="@font/quicksand_bold"
         android:gravity="center"
-        android:backgroundTint="@color/green_nu"
+        android:backgroundTint="@color/blue_li"
         android:text="Shop"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/dark_blue"
@@ -30,14 +30,14 @@
     <Button
         android:id="@+id/split"
         android:layout_width="297dp"
-        android:layout_height="157dp"
+        android:layout_height="200dp"
         app:backgroundTint="@null"
         android:background="@drawable/main_button"
         android:backgroundTint="@color/mustard"
         android:fontFamily="@font/quicksand_bold"
         android:gravity="center"
         android:text="Split"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="50dp"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/dark_blue"
@@ -152,5 +152,14 @@
 
     </RelativeLayout>
 
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="850dp"
+        android:layout_height="850dp"
+        app:srcCompat="@drawable/bg"
+        app:tint="#4B000000"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-420dp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
